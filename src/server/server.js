@@ -30,6 +30,6 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
 });
 
 
-app.get("api/test", (req, res) => {
+app.get("/api/test", (req, res) => {
     res.status(200).send("Hello test!");
 });
