@@ -24,7 +24,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
 
     // Initialize the app.
     let server = app.listen(process.env.PORT || 8080, () => {
-        let port = server.address().port;
+        let port = server.address();
         console.log("App now running on port", port);
     });
 });
