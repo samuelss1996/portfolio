@@ -1,12 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
-const ObjectID = mongodb.ObjectID;
-
-const CONTACTS_COLLECTION = "contacts";
+const path = require("path");
 
 const app = express();
 app.use(bodyParser.json());
+
+// Create a link to Angular directory
+let distDir = path.join(__dirname, "../../dist/");
+app.use(express.static(distDir));
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 let db;
@@ -25,11 +27,11 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
     // Initialize the app.
     let server = app.listen(process.env.PORT || 8080, () => {
         let port = server.address().port;
-        console.log("App now running on port", port);
+        console.log("App now running on http://localhost:" + port);
     });
 });
 
 
 app.get("/api/test", (req, res) => {
-    res.status(200).send("Hello test!");
+    res.status(200).json({message: "Hello test!"});
 });
