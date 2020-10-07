@@ -4,7 +4,7 @@
     "scripts": {
         "ng": "ng",
         "start": "node src/server/server.js",
-        "debug": "concurrently \"ng serve --proxy-config proxy.config.json --configuration=en\" \"nodemon src/server/server.js\"",
+        "debug": "concurrently \"ng serve --proxy-config proxy.config.json\" \"nodemon src/server/server.js\"",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
@@ -34,7 +34,6 @@
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~0.1001.4",
-        "@angular/localize": "^10.1.4",
         "@types/jasmine": "~3.5.0",
         "@types/jasminewd2": "~2.0.3",
         "@types/node": "^12.12.64",
