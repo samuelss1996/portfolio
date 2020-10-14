@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
 
 @Injectable({
     providedIn: 'root'
@@ -8,16 +8,17 @@ export class LanguageService {
     private static readonly availableLanguages = ['es', 'en'];
     private static readonly defaultLanguage = 'en';
 
-    private currentLanguage: string;
+    // tslint:disable-next-line:variable-name
+    private _currentLanguage: string;
 
     constructor(private translate: TranslateService) {
-        this.currentLanguage = localStorage.getItem('language');
+        this._currentLanguage = localStorage.getItem('language');
 
-        if (this.currentLanguage === null) {
+        if (this._currentLanguage === null) {
             this.setAndSaveLanguage(this.getNavigatorLanguage());
         }
 
-        this.translate.use(this.currentLanguage);
+        this.translate.use(this._currentLanguage);
         this.translate.setDefaultLang(LanguageService.defaultLanguage);
     }
 
@@ -25,14 +26,14 @@ export class LanguageService {
         let actualLanguage = languageCode.split('-')[0];
         actualLanguage = LanguageService.availableLanguages.includes(actualLanguage) ? actualLanguage : LanguageService.defaultLanguage;
 
-        this.currentLanguage = actualLanguage;
-        localStorage.setItem('language', this.currentLanguage);
+        this._currentLanguage = actualLanguage;
+        localStorage.setItem('language', this._currentLanguage);
 
-        this.translate.use(this.currentLanguage);
+        this.translate.use(this._currentLanguage);
     }
 
     public changeLanguage(): void {
-        this.setAndSaveLanguage(LanguageService.availableLanguages.filter(i => i !== this.currentLanguage)[0]);
+        this.setAndSaveLanguage(LanguageService.availableLanguages.filter(i => i !== this._currentLanguage)[0]);
     }
 
     private getNavigatorLanguage(): string {
@@ -47,5 +48,10 @@ export class LanguageService {
 
         // @ts-ignore
         return navigator.userLanguage || navigator.language;
+    }
+
+
+    get currentLanguage(): string {
+        return this._currentLanguage;
     }
 }
