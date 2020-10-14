@@ -6,10 +6,30 @@ import {AppRoutingProviders, Routing} from './app.routing';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HeaderComponent } from './component/section/header/header.component';
+import { HomeComponent } from './component/page/home/home.component';
+import { ProjectsComponent } from './component/page/projects/projects.component';
+import { ActivitiesComponent } from './component/page/activities/activities.component';
+import { DocumentsComponent } from './component/page/documents/documents.component';
+import { SocialNetworksComponent } from './component/section/social-networks/social-networks.component';
+import { ResponsiveSectionComponent } from './component/section/responsive-section/responsive-section.component';
+import { FooterComponent } from './component/section/footer/footer.component';
+import { ExperienceComponent } from './component/section/experience/experience.component';
+import { SkillComponent } from './component/section/skill/skill.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        HomeComponent,
+        ProjectsComponent,
+        ActivitiesComponent,
+        DocumentsComponent,
+        SocialNetworksComponent,
+        ResponsiveSectionComponent,
+        FooterComponent,
+        ExperienceComponent,
+        SkillComponent
     ],
     imports: [
         Routing,

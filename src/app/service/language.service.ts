@@ -8,26 +8,31 @@ export class LanguageService {
     private static readonly availableLanguages = ['es', 'en'];
     private static readonly defaultLanguage = 'en';
 
-    private languageCode: string;
+    private currentLanguage: string;
 
     constructor(private translate: TranslateService) {
-        this.languageCode = localStorage.getItem('language');
+        this.currentLanguage = localStorage.getItem('language');
 
-        if (this.languageCode === null) {
+        if (this.currentLanguage === null) {
             this.setAndSaveLanguage(this.getNavigatorLanguage());
         }
 
-        translate.setDefaultLang(LanguageService.defaultLanguage);
+        this.translate.use(this.currentLanguage);
+        this.translate.setDefaultLang(LanguageService.defaultLanguage);
     }
 
     public setAndSaveLanguage(languageCode: string): void {
         let actualLanguage = languageCode.split('-')[0];
         actualLanguage = LanguageService.availableLanguages.includes(actualLanguage) ? actualLanguage : LanguageService.defaultLanguage;
 
-        this.languageCode = actualLanguage;
-        localStorage.setItem('language', this.languageCode);
+        this.currentLanguage = actualLanguage;
+        localStorage.setItem('language', this.currentLanguage);
 
-        this.translate.use(this.languageCode);
+        this.translate.use(this.currentLanguage);
+    }
+
+    public changeLanguage(): void {
+        this.setAndSaveLanguage(LanguageService.availableLanguages.filter(i => i !== this.currentLanguage)[0]);
     }
 
     private getNavigatorLanguage(): string {
