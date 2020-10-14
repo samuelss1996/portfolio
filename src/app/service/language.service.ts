@@ -5,23 +5,42 @@ import {TranslateService} from '@ngx-translate/core';
     providedIn: 'root'
 })
 export class LanguageService {
+    private static readonly availableLanguages = ['es', 'en'];
+    private static readonly defaultLanguage = 'en';
+
     private languageCode: string;
 
     constructor(private translate: TranslateService) {
         this.languageCode = localStorage.getItem('language');
 
-        // TODO try to use navigator.languages
         if (this.languageCode === null) {
-            // @ts-ignore
-            this.setAndSaveLanguage(window.navigator.userLanguage || window.navigator.language);
+            this.setAndSaveLanguage(this.getNavigatorLanguage());
         }
 
-        translate.setDefaultLang('en');
-        translate.use(this.languageCode);
+        translate.setDefaultLang(LanguageService.defaultLanguage);
     }
 
     public setAndSaveLanguage(languageCode: string): void {
-        this.languageCode = languageCode.split('-')[0];
+        let actualLanguage = languageCode.split('-')[0];
+        actualLanguage = LanguageService.availableLanguages.includes(actualLanguage) ? actualLanguage : LanguageService.defaultLanguage;
+
+        this.languageCode = actualLanguage;
         localStorage.setItem('language', this.languageCode);
+
+        this.translate.use(this.languageCode);
+    }
+
+    private getNavigatorLanguage(): string {
+        if (navigator.languages) {
+            navigator.languages.forEach(lang => {
+                lang = lang.split('-')[0];
+                if (LanguageService.availableLanguages.includes(lang)) {
+                    return lang;
+                }
+            });
+        }
+
+        // @ts-ignore
+        return navigator.userLanguage || navigator.language;
     }
 }
