@@ -19,7 +19,9 @@ import {SkillComponent} from './component/section/skill/skill.component';
 import { LocalizedDatePipe } from './pipe/localized-date.pipe';
 
 import localeEs from '@angular/common/locales/es';
-import {registerLocaleData} from '@angular/common';
+import {CommonModule, registerLocaleData} from '@angular/common';
+import { ArticleListComponent } from './component/section/article-list/article-list.component';
+import { ArticleListItemComponent } from './component/section/article-list-item/article-list-item.component';
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -35,7 +37,9 @@ registerLocaleData(localeEs);
         FooterComponent,
         ExperienceComponent,
         SkillComponent,
-        LocalizedDatePipe
+        LocalizedDatePipe,
+        ArticleListComponent,
+        ArticleListItemComponent
     ],
     imports: [
         Routing,
