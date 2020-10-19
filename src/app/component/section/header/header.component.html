@@ -1,0 +1,12 @@
+<header>
+    <nav>
+        <ul id="main-menu">
+            <li><a [routerLink]="['']" [routerLinkActive]="['active']" translate>menu.home</a></li>
+            <li><a [routerLink]="['projects']" [routerLinkActive]="['active']" translate>menu.projects</a></li>
+            <li><a [routerLink]="['activities']" [routerLinkActive]="['active']" translate>menu.activities</a></li>
+            <li><a [routerLink]="['documents']" [routerLinkActive]="['active']" translate>menu.documents</a></li>
+        </ul>
+    </nav>
+
+    <p><a [routerLink]="" (click)="changeLanguage()" translate>Español</a></p>
+</header>
