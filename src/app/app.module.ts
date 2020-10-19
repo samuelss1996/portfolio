@@ -22,6 +22,7 @@ import localeEs from '@angular/common/locales/es';
 import {CommonModule, registerLocaleData} from '@angular/common';
 import { ArticleListComponent } from './component/section/article-list/article-list.component';
 import { ArticleListItemComponent } from './component/section/article-list-item/article-list-item.component';
+import { ArticleComponent } from './component/page/article/article.component';
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -39,7 +40,8 @@ registerLocaleData(localeEs);
         SkillComponent,
         LocalizedDatePipe,
         ArticleListComponent,
-        ArticleListItemComponent
+        ArticleListItemComponent,
+        ArticleComponent
     ],
     imports: [
         Routing,
