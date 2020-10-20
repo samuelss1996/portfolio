@@ -1,12 +1,19 @@
 <header>
-    <nav>
-        <ul id="main-menu">
-            <li><a [routerLink]="['']" [routerLinkActive]="['active']" translate>menu.home</a></li>
-            <li><a [routerLink]="['projects']" [routerLinkActive]="['active']" translate>menu.projects</a></li>
-            <li><a [routerLink]="['activities']" [routerLinkActive]="['active']" translate>menu.activities</a></li>
-            <li><a [routerLink]="['documents']" [routerLinkActive]="['active']" translate>menu.documents</a></li>
-        </ul>
-    </nav>
+    <div class="shadow-sm">
+        <nav class="container">
+            <ul id="main-menu" class="row flex-nowrap justify-content-center">
+                <li class="col"><a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" translate>menu.home</a></li>
+                <li class="col"><a routerLink="projects" routerLinkActive="active" translate>menu.projects</a>
+                </li>
+                <li class="col"><a routerLink="activities" routerLinkActive="active" translate>menu.activities</a>
+                </li>
+                <li class="col"><a routerLink="documents" routerLinkActive="active" translate>menu.documents</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-    <p><a [routerLink]="" (click)="changeLanguage()" translate>Español</a></p>
+    <div class="container">
+        <p class="row justify-content-end"><a class="col-3" id="change-language" routerLink="" (click)="changeLanguage()" translate>Español</a></p>
+    </div>
 </header>

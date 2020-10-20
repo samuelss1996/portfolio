@@ -1,0 +1,43 @@
+#main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+#main-menu li a {
+    height: 48px;
+    display: block;
+    line-height: 48px;
+    color: #333333;
+    width: fit-content;
+    margin: auto;
+    padding: 0;
+}
+
+#main-menu li a:hover {
+    color: #007bff;
+}
+
+#main-menu li a.active {
+    border-bottom: 3px solid #007bff;
+    color: #007bff;
+}
+
+#change-language {
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    #main-menu {
+        font-size: 18px;
+    }
+
+    #main-menu li a {
+        height: 64px;
+        line-height: 64px;
+        padding: 0 8px;
+    }
+}
