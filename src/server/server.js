@@ -31,7 +31,11 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
     });
 });
 
-
 app.get("/api/test", (req, res) => {
     res.status(200).json({message: "Hello test!"});
 });
+
+app.all('/*', function(req, res, next) {
+    res.sendFile('index.html', { root: distDir });
+});
+
