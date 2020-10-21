@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+.social-networks li a {
+    font-size: 2rem;
+}
+
 .social-networks li img {
     height: 2rem;
     width: auto;
