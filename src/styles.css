@@ -3,12 +3,22 @@
     clear: both;
 }
 
-* {
-    color: #333;
-}
-
 @media (pointer: coarse) {
     a:hover {
         text-decoration: none !important;
     }
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: normal;
 }
