@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-social-networks',
-  templateUrl: './social-networks.component.html',
-  styleUrls: ['./social-networks.component.css']
+    selector: 'app-social-networks',
+    templateUrl: './social-networks.component.html',
+    styleUrls: ['./social-networks.component.css']
 })
 export class SocialNetworksComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }
