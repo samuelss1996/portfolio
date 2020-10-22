@@ -19,10 +19,17 @@
     margin-bottom: 0.25rem;
 }
 
-.vertical-line {
-    width: 2px;
-    height: 100%;
-    border: 1px solid #007bff;
+#experience-wrapper {
+    border-left: 2px solid #007bff;
     margin-left: 2rem;
+}
+
+#experience-wrapper::before, #experience-wrapper::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
     position: absolute;
+    border-radius: 4px;
+    margin-left: -5px;
 }
