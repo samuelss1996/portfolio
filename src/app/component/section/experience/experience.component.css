@@ -1,0 +1,17 @@
+.experience-item img {
+    width: 4rem;
+    border: 2px solid #007bff;
+    border-radius: 2rem;
+}
+
+.experience-item h4, .experience-item h5 {
+    margin: 0;
+}
+
+.dummy-icon {
+    width: 4rem;
+}
+
+.date-title-corporation {
+    margin: 1rem 0;
+}

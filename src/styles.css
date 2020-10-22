@@ -43,6 +43,13 @@ h5 {
     font-weight: normal;
 }
 
+h6 {
+    font-size: 0.8rem;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0;
+}
+
 p {
     text-align: justify;
 }

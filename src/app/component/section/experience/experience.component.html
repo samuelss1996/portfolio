@@ -1,9 +1,21 @@
 <div class="experience-item">
-    <img src="{{imageSrc}}" alt="">
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="{{imageSrc}}" alt="">
+        </div>
 
-    <h6>{{dayStart | localizedDate}} - {{dayEnd | localizedDate}}</h6>
-    <h4>{{title}}</h4>
-    <h5>{{corporation}}</h5>
+        <div class="col date-title-corporation">
+            <h6>{{dayStart | localizedDate}} - {{dayEnd | localizedDate}}</h6>
+            <h4>{{title}}</h4>
+            <h5>{{corporation}}</h5>
+        </div>
+    </div>
 
-    <p>{{description}}</p>
+    <div class="row">
+        <div class="col-auto">
+            <div class="dummy-icon"></div>
+        </div>
+
+        <p class="col">{{description}}</p>
+    </div>
 </div>
