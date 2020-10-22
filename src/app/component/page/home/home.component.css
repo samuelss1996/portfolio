@@ -18,3 +18,11 @@
 #interests li {
     margin-bottom: 0.25rem;
 }
+
+.vertical-line {
+    width: 2px;
+    height: 100%;
+    border: 1px solid #007bff;
+    margin-left: 2rem;
+    position: absolute;
+}
