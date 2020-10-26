@@ -1,10 +1,12 @@
 const express = require("express");
+const compression = require("compression");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
 const path = require("path");
 
 const app = express();
 app.use(bodyParser.json());
+app.use(compression());
 
 // Create a link to Angular directory
 let distDir = path.join(__dirname, "../../dist/");
