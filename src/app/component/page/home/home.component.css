@@ -33,3 +33,19 @@
     border-radius: 4px;
     margin-left: -5px;
 }
+
+#skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-sublist {
+    list-style: disc;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .skill-sublist {
+        margin-bottom: 3rem;
+    }
+}

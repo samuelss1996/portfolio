@@ -1,4 +1,16 @@
-<img src="assets/img/placeholder-icon.png" alt="" />
-<h4>{{title}}</h4>
+<div class="row align-items-center no-gutters">
+    <div class="col-auto">
+        <img class="skill-icon" src="assets/img/placeholder-icon.png" alt=""/>
+    </div>
+    <h4 class="col">{{title}}</h4>
+</div>
 
-<ng-content></ng-content>
+<div class="row no-gutters">
+    <div class="col-auto">
+        <div class="dummy-icon"></div>
+    </div>
+    <div class="col">
+        <ng-content></ng-content>
+    </div>
+</div>
+

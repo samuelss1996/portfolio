@@ -51,6 +51,7 @@
     </section>
 </div>
 
+<!--TODO this should be an entire component with a template, stop doing this-->
 <app-responsive-section [title]="'Experience' | translate">
     <div id="experience-wrapper">
         <app-experience class="experience-item-wrapper"
@@ -82,11 +83,60 @@
     </div>
 </app-responsive-section>
 
+<!--TODO this should be an entire component with a template, stop doing this-->
 <app-responsive-section [title]="'Skills' | translate">
-    <ul>
-        <li>
+    <ul id="skills" class="row">
+        <li class="col-12 col-md-6">
             <app-skill [title]="'General purpose languages' | translate">
-                <ul>
+                <ul class="skill-sublist">
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </app-skill>
+        </li>
+
+        <li class="col-12 col-md-6">
+            <app-skill [title]="'General purpose languages' | translate">
+                <ul class="skill-sublist">
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </app-skill>
+        </li>
+
+        <li class="col-12 col-md-6">
+            <app-skill [title]="'General purpose languages' | translate">
+                <ul class="skill-sublist">
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </app-skill>
+        </li>
+
+        <li class="col-12 col-md-6">
+            <app-skill [title]="'General purpose languages' | translate">
+                <ul class="skill-sublist">
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </app-skill>
+        </li>
+
+        <li class="col-12 col-md-6">
+            <app-skill [title]="'General purpose languages' | translate">
+                <ul class="skill-sublist">
                     <li>Java</li>
                     <li>Kotlin</li>
                     <li>C</li>
