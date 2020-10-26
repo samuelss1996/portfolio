@@ -1,163 +1,169 @@
-<div class="row">
-    <section id="profile" class="col-12 col-lg-3 pr-md-5">
-        <img id="profile-pic" class="img-responsive" src="assets/img/profile.jpg" [alt]="'Picture of me' | translate"/>
-        <h2>Samuel Soutullo</h2>
-        <h5 id="current-work">Centro Singular de Investigación en Tecnologías Inteligentes (CITIUS)</h5>
+<div class="container">
+    <div class="row">
+        <section id="profile" class="col-12 col-lg-3 pr-md-5">
+            <img id="profile-pic" class="img-responsive" src="assets/img/profile.jpg" [alt]="'Picture of me' | translate"/>
+            <h2>Samuel Soutullo</h2>
+            <h5 id="current-work">Centro Singular de Investigación en Tecnologías Inteligentes (CITIUS)</h5>
 
-        <app-social-networks></app-social-networks>
-    </section>
+            <app-social-networks></app-social-networks>
+        </section>
 
-    <section id="about-me" class="col-12 col-lg-9 pl-md-4">
-        <h1 translate>About me</h1>
-        <p translate>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est
-            laborum.</p>
+        <section id="about-me" class="col-12 col-lg-9 pl-md-4">
+            <h1 translate>About me</h1>
+            <p translate>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est
+                laborum.</p>
 
-        <div class="row" id="about-bullets">
-            <div class="col-12 col-lg-6">
-                <h4 translate>Interests</h4>
-                <ul id="interests" class="fa-ul">
-                    <li translate><span class="fa-li"><i class="fas fa-gamepad"></i></span>Videogames development</li>
-                    <li translate><span class="fa-li"><i class="fab fa-android"></i></span>Android applications
-                        development
-                    </li>
-                    <li translate><span class="fa-li"><i class="fas fa-globe"></i></span>Web applications development
-                    </li>
-                </ul>
+            <div class="row" id="about-bullets">
+                <div class="col-12 col-lg-6">
+                    <h4 translate>Interests</h4>
+                    <ul id="interests" class="fa-ul">
+                        <li translate><span class="fa-li"><i class="fas fa-gamepad"></i></span>Videogames development</li>
+                        <li translate><span class="fa-li"><i class="fab fa-android"></i></span>Android applications
+                            development
+                        </li>
+                        <li translate><span class="fa-li"><i class="fas fa-globe"></i></span>Web applications development
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <h4 translate>Education</h4>
+                    <ul id="education" class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
+                            <span translate>MsC in Game Design and Technology</span>
+                            <h5 translate>University of Gothenburg (2018 - 2020)</h5>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
+                            <span translate>BsC in Computer Engineering</span>
+                            <h5 translate>University of Santiago de Compostela (2014 - 2018)</h5>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="col-12 col-lg-6">
-                <h4 translate>Education</h4>
-                <ul id="education" class="fa-ul">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
-                        <span translate>MsC in Game Design and Technology</span>
-                        <h5 translate>University of Gothenburg (2018 - 2020)</h5>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
-                        <span translate>BsC in Computer Engineering</span>
-                        <h5 translate>University of Santiago de Compostela (2014 - 2018)</h5>
-                    </li>
-                </ul>
-            </div>
+    <!--TODO this should be an entire component with a template, stop doing this-->
+    <app-responsive-section [title]="'Experience' | translate">
+        <div id="experience-wrapper">
+            <app-experience class="experience-item-wrapper"
+                            [title]="'Research Support Superior Technician' | translate"
+                            [corporation]="'Centro Singular de Investigación en Tecnologías Inteligentes (USC)' | translate"
+                            [dayStart]="'2020-08-24' | translate"
+                            [dayEnd]="'2020-12-14' | translate"
+                            [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' | translate"
+                            [imageSrc]="'assets/img/placeholder-icon.png'"
+            ></app-experience>
+
+            <app-experience class="experience-item-wrapper"
+                            [title]="'Research Support Superior Technician' | translate"
+                            [corporation]="'Centro Singular de Investigación en Tecnologías Inteligentes (USC)' | translate"
+                            [dayStart]="'2020-08-24' | translate"
+                            [dayEnd]="'2020-12-14' | translate"
+                            [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' | translate"
+                            [imageSrc]="'assets/img/placeholder-icon.png'"
+            ></app-experience>
+
+            <app-experience class="experience-item-wrapper"
+                            [title]="'Research Support Superior Technician' | translate"
+                            [corporation]="'Centro Singular de Investigación en Tecnologías Inteligentes (USC)' | translate"
+                            [dayStart]="'2020-08-24' | translate"
+                            [dayEnd]="'2020-12-14' | translate"
+                            [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' | translate"
+                            [imageSrc]="'assets/img/placeholder-icon.png'"
+            ></app-experience>
         </div>
-    </section>
+    </app-responsive-section>
+
+    <!--TODO this should be an entire component with a template, stop doing this-->
+    <app-responsive-section [title]="'Skills' | translate">
+        <ul id="skills" class="row">
+            <li class="col-12 col-md-6">
+                <app-skill [title]="'General purpose languages' | translate">
+                    <ul class="skill-sublist">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                    </ul>
+                </app-skill>
+            </li>
+
+            <li class="col-12 col-md-6">
+                <app-skill [title]="'General purpose languages' | translate">
+                    <ul class="skill-sublist">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                    </ul>
+                </app-skill>
+            </li>
+
+            <li class="col-12 col-md-6">
+                <app-skill [title]="'General purpose languages' | translate">
+                    <ul class="skill-sublist">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                    </ul>
+                </app-skill>
+            </li>
+
+            <li class="col-12 col-md-6">
+                <app-skill [title]="'General purpose languages' | translate">
+                    <ul class="skill-sublist">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                    </ul>
+                </app-skill>
+            </li>
+
+            <li class="col-12 col-md-6">
+                <app-skill [title]="'General purpose languages' | translate">
+                    <ul class="skill-sublist">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                    </ul>
+                </app-skill>
+            </li>
+        </ul>
+    </app-responsive-section>
 </div>
 
-<!--TODO this should be an entire component with a template, stop doing this-->
-<app-responsive-section [title]="'Experience' | translate">
-    <div id="experience-wrapper">
-        <app-experience class="experience-item-wrapper"
-                        [title]="'Research Support Superior Technician' | translate"
-                        [corporation]="'Centro Singular de Investigación en Tecnologías Inteligentes (USC)' | translate"
-                        [dayStart]="'2020-08-24' | translate"
-                        [dayEnd]="'2020-12-14' | translate"
-                        [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' | translate"
-                        [imageSrc]="'assets/img/placeholder-icon.png'"
-        ></app-experience>
-
-        <app-experience class="experience-item-wrapper"
-                        [title]="'Research Support Superior Technician' | translate"
-                        [corporation]="'Centro Singular de Investigación en Tecnologías Inteligentes (USC)' | translate"
-                        [dayStart]="'2020-08-24' | translate"
-                        [dayEnd]="'2020-12-14' | translate"
-                        [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' | translate"
-                        [imageSrc]="'assets/img/placeholder-icon.png'"
-        ></app-experience>
-
-        <app-experience class="experience-item-wrapper"
-                        [title]="'Research Support Superior Technician' | translate"
-                        [corporation]="'Centro Singular de Investigación en Tecnologías Inteligentes (USC)' | translate"
-                        [dayStart]="'2020-08-24' | translate"
-                        [dayEnd]="'2020-12-14' | translate"
-                        [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' | translate"
-                        [imageSrc]="'assets/img/placeholder-icon.png'"
-        ></app-experience>
-    </div>
-</app-responsive-section>
-
-<!--TODO this should be an entire component with a template, stop doing this-->
-<app-responsive-section [title]="'Skills' | translate">
-    <ul id="skills" class="row">
-        <li class="col-12 col-md-6">
-            <app-skill [title]="'General purpose languages' | translate">
-                <ul class="skill-sublist">
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
-            </app-skill>
-        </li>
-
-        <li class="col-12 col-md-6">
-            <app-skill [title]="'General purpose languages' | translate">
-                <ul class="skill-sublist">
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
-            </app-skill>
-        </li>
-
-        <li class="col-12 col-md-6">
-            <app-skill [title]="'General purpose languages' | translate">
-                <ul class="skill-sublist">
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
-            </app-skill>
-        </li>
-
-        <li class="col-12 col-md-6">
-            <app-skill [title]="'General purpose languages' | translate">
-                <ul class="skill-sublist">
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
-            </app-skill>
-        </li>
-
-        <li class="col-12 col-md-6">
-            <app-skill [title]="'General purpose languages' | translate">
-                <ul class="skill-sublist">
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
-            </app-skill>
-        </li>
-    </ul>
-</app-responsive-section>
-
 <section id="home-conclusion">
-    <h1 translate>Do you want to know more?</h1>
-    <p translate>You can get in touch with me using:</p>
-    <app-social-networks></app-social-networks>
+    <div class="container">
+        <h1 translate>Do you want to know more?</h1>
+        <p translate>You can get in touch with me using:</p>
+        <app-social-networks></app-social-networks>
 
-    <p translate>Or you can <a href="" translate>download my CV as a PDF</a></p>
+        <div class="line-separator"></div>
+        <p translate>Or you can <a href="" translate>download my CV as a PDF</a></p>
 
-    <p translate>You can also explore my
-        <a [routerLink]="['projects']" translate>projects</a>,
-        <a [routerLink]="['activities']" translate>activities</a> and
-        <a [routerLink]="['documents']" translate>academic documents</a>.
-    </p>
+        <div class="line-separator"></div>
+        <p translate>You can also explore my
+            <a [routerLink]="['projects']" translate>projects</a>,
+            <a [routerLink]="['activities']" translate>activities</a> and
+            <a [routerLink]="['documents']" translate>academic documents</a>.
+        </p>
+    </div>
 </section>

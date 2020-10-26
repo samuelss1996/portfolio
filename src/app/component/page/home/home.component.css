@@ -44,6 +44,22 @@
     margin-bottom: 2rem;
 }
 
+#home-conclusion {
+    background-color: #EEEEEE;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center !important;
+}
+
+#home-conclusion p {
+    text-align: center !important;
+    margin-bottom: 0;
+}
+
+.line-separator {
+    height: 1.5rem;
+}
+
 @media (min-width: 768px) {
     .skill-sublist {
         margin-bottom: 3rem;
