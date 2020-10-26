@@ -1,10 +1,18 @@
-<footer class="container">
-    <p translate>Developed with 💖 using
-        <a href="" translate>Angular</a> and
-        <a href="" translate>Bootstrap</a>
-    </p>
+<footer>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md order-md-1">
+                <app-social-networks [renderMode]="'white-text'"></app-social-networks>
+            </div>
 
-    <app-social-networks></app-social-networks>
+            <p class="col-12 col-md text-center text-md-left my-3 my-md-0 order-md-0" translate>Developed with 💖 using
+                <a href="https://angular.io/" target="_blank" translate>Angular</a> and
+                <a href="https://getbootstrap.com/" target="_blank" translate>Bootstrap</a>
+            </p>
 
-    <a href="" translate>GitHub repository</a>
+            <div class="col-12 col-md text-center text-md-right order-md-2">
+                <a href="https://github.com/samuelss1996/portfolio" target="_blank" translate>GitHub repository</a>
+            </div>
+        </div>
+    </div>
 </footer>

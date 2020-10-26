@@ -1,0 +1,12 @@
+footer {
+    background-color: #01579B;
+    padding: 0.5rem 0;
+}
+
+* {
+    color: white !important;
+}
+
+p {
+    margin: 0;
+}

@@ -1,10 +1,5 @@
-.clearfix {
-    float: none;
-    clear: both;
-}
-
 @media (pointer: coarse) {
-    a:hover {
+    .undecorated:hover {
         text-decoration: none !important;
     }
 }
@@ -18,7 +13,19 @@
 }
 
 .white-text {
-    color: #dedad6;
+    color: #fff;
+}
+
+a.white-text:hover {
+    color: #fff;
+}
+
+.undecorated {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: underline;
 }
 
 h1 {
