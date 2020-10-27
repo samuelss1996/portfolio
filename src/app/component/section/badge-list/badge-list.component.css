@@ -1,0 +1,13 @@
+.badge-list {
+    list-style: none;
+    padding: 0;
+}
+
+.badge-list li {
+    display: inline-block;
+    background-color: #E4E4E4;
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}

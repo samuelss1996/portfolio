@@ -1,13 +1,8 @@
-<app-article-list [title]="'Videogames' | translate">
-    <app-article-list-item></app-article-list-item>
-    <app-article-list-item></app-article-list-item>
-    <app-article-list-item></app-article-list-item>
-    <app-article-list-item></app-article-list-item>
-</app-article-list>
-
-<app-article-list [title]="'Apps' | translate">
-    <app-article-list-item></app-article-list-item>
-    <app-article-list-item></app-article-list-item>
-    <app-article-list-item></app-article-list-item>
-    <app-article-list-item></app-article-list-item>
-</app-article-list>
+<div class="container">
+    <section *ngFor="let section of sections" class="mb-3">
+        <h1 class="my-4">{{section}}</h1>
+        <ul class="article-list row mx-n4">
+            <app-article-list-item *ngFor="let article of articles" class="col-12 col-md-6 col-lg-4 px-4"></app-article-list-item>
+        </ul>
+    </section>
+</div>

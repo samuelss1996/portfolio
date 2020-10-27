@@ -1,19 +1,17 @@
-<li>
-    <div (mouseenter)="mouseOver = true" (mouseleave)="mouseOver = false">
-        <img src="assets/img/placeholder-icon.png" alt=""/>
-        <p><a *ngIf="mouseOver" href="" translate>Read more</a></p>
+<li class="mb-5">
+    <div class="article-list-item" (mouseenter)="mouseOver = true" (mouseleave)="mouseOver = false" (click)="onClicked()">
+        <div class="article-thumbnail-wrapper">
+            <img class="img-responsive article-thumbnail" src="assets/img/placeholder-pic.png" alt=""/>
+            <h1 class="read-more-link" [class.hidden]="!mouseOver" translate>Read more</h1>
+        </div>
 
-        <ul class="badge-list">
-            <li>Unity</li>
-            <li>C#</li>
-            <li>Game Design</li>
-        </ul>
+        <app-badge-list></app-badge-list>
 
-        <h3>Under Surveillance</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        <h3 class="mt-2" [class.underline]="mouseOver">Under Surveillance</h3>
+        <p [class.underline]="mouseOver" class="mini text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua.</p>
-        <p>Second paragaph lol.</p>
+        <p [class.underline]="mouseOver" class="mini text-left">Second paragaph lol.</p>
     </div>
 
-    <p><a href=""><img src="favicon.ico" alt=""></a></p>
+    <app-article-external-links></app-article-external-links>
 </li>
