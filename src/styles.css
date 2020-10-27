@@ -61,6 +61,11 @@ h6 {
     margin: 0;
 }
 
+.article-list {
+    list-style: none;
+    padding: 0;
+}
+
 .shadow-medium {
     box-shadow: 0 3px 6px rgba(0,0,0,0.23);
 }
