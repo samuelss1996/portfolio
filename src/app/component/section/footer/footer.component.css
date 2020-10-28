@@ -1,6 +1,9 @@
+:host {
+    margin-top: auto;
+}
+
 footer {
     background-color: #01579B;
-    padding: 0.5rem 0;
 }
 
 * {
