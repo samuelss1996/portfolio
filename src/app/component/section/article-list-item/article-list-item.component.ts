@@ -9,13 +9,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class ArticleListItemComponent implements OnInit {
     public mouseOver: boolean;
 
-    constructor(private router: Router, private route: ActivatedRoute) {
+    constructor() {
     }
 
     ngOnInit(): void {
-    }
-
-    onClicked(): void {
-        this.router.navigate(['1'], { relativeTo: this.route });
     }
 }

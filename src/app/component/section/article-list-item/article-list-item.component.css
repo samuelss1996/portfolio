@@ -36,3 +36,13 @@
 h3, p {
     transition: all 300ms;
 }
+
+a {
+    color: #212529;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}

@@ -24,6 +24,10 @@ a.white-text:hover {
     text-decoration: none;
 }
 
+.undecorated:active {
+    text-decoration: underline;
+}
+
 .mini {
     font-size: 0.9rem;
 }
