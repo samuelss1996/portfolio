@@ -1,5 +1,16 @@
-.experience-item:not(:last-child) {
-    margin-bottom: 4rem;
+#experience-wrapper {
+    border-left: 2px solid #007bff;
+    margin-left: 2rem;
+}
+
+#experience-wrapper::before, #experience-wrapper::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    position: absolute;
+    border-radius: 4px;
+    margin-left: -5px;
 }
 
 .experience-item img {
