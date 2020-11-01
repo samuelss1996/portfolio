@@ -26,6 +26,7 @@ import { BadgeListComponent } from './component/section/badge-list/badge-list.co
 import { ArticleExternalLinksComponent } from './component/section/article-external-links/article-external-links.component';
 import { ProfileComponent } from './component/section/profile/profile.component';
 import { AboutMeComponent } from './component/section/about-me/about-me.component';
+import { HomeConclusionComponent } from './component/section/home-conclusion/home-conclusion.component';
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -47,7 +48,8 @@ registerLocaleData(localeEs);
         BadgeListComponent,
         ArticleExternalLinksComponent,
         ProfileComponent,
-        AboutMeComponent
+        AboutMeComponent,
+        HomeConclusionComponent
     ],
     imports: [
         Routing,

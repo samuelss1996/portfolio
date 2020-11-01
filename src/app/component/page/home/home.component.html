@@ -5,25 +5,7 @@
     </div>
 
     <app-experience></app-experience>
-
-    <!--TODO this should be an entire component with a template, stop doing this-->
     <app-skills></app-skills>
 </div>
 
-<section id="home-conclusion">
-    <div class="container">
-        <h1 translate>Do you want to know more?</h1>
-        <p translate>You can get in touch with me using:</p>
-        <app-social-networks></app-social-networks>
-
-        <div class="line-separator"></div>
-        <p translate>Or you can <a href="" translate>download my CV as a PDF</a></p>
-
-        <div class="line-separator"></div>
-        <p translate>You can also explore my
-            <a [routerLink]="['projects']" translate>projects</a>,
-            <a [routerLink]="['activities']" translate>activities</a> and
-            <a [routerLink]="['documents']" translate>academic documents</a>.
-        </p>
-    </div>
-</section>
+<app-home-conclusion></app-home-conclusion>
