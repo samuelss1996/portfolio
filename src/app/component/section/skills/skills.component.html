@@ -1,0 +1,23 @@
+<app-responsive-section [title]="'Skills' | translate">
+    <ul id="skills" class="row">
+        <li class="col-12 col-md-6" *ngFor="let iteration of iterations">
+            <div class="row align-items-center no-gutters">
+                <div class="col-auto">
+                    <img class="skill-icon" src="assets/img/placeholder-icon.png" alt=""/>
+                </div>
+                <h4 class="col">{{title}}</h4>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-auto">
+                    <div class="dummy-icon"></div>
+                </div>
+                <div class="col">
+                    <ul class="skill-sublist">
+                        <li *ngFor="let language of languages">{{language}}</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</app-responsive-section>

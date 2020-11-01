@@ -15,14 +15,18 @@ import {SocialNetworksComponent} from './component/section/social-networks/socia
 import {ResponsiveSectionComponent} from './component/section/responsive-section/responsive-section.component';
 import {FooterComponent} from './component/section/footer/footer.component';
 import {ExperienceComponent} from './component/section/experience/experience.component';
-import {SkillComponent} from './component/section/skill/skill.component';
+import {SkillsComponent} from './component/section/skills/skills.component';
 import { LocalizedDatePipe } from './pipe/localized-date.pipe';
 
 import localeEs from '@angular/common/locales/es';
 import {CommonModule, registerLocaleData} from '@angular/common';
-import { ArticleListComponent } from './component/section/article-list/article-list.component';
 import { ArticleListItemComponent } from './component/section/article-list-item/article-list-item.component';
 import { ArticleComponent } from './component/page/article/article.component';
+import { BadgeListComponent } from './component/section/badge-list/badge-list.component';
+import { ArticleExternalLinksComponent } from './component/section/article-external-links/article-external-links.component';
+import { ProfileComponent } from './component/section/profile/profile.component';
+import { AboutMeComponent } from './component/section/about-me/about-me.component';
+import { HomeConclusionComponent } from './component/section/home-conclusion/home-conclusion.component';
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -37,11 +41,15 @@ registerLocaleData(localeEs);
         ResponsiveSectionComponent,
         FooterComponent,
         ExperienceComponent,
-        SkillComponent,
+        SkillsComponent,
         LocalizedDatePipe,
-        ArticleListComponent,
         ArticleListItemComponent,
-        ArticleComponent
+        ArticleComponent,
+        BadgeListComponent,
+        ArticleExternalLinksComponent,
+        ProfileComponent,
+        AboutMeComponent,
+        HomeConclusionComponent
     ],
     imports: [
         Routing,

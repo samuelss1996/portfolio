@@ -7,7 +7,7 @@ import {ActivatedRoute} from '@angular/router';
     styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-    private id: string;
+    id: string;
 
     constructor(private route: ActivatedRoute) {
     }

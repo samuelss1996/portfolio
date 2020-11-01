@@ -1,4 +1,7 @@
-<section>
-    <h1>{{title}}</h1>
-    <ng-content></ng-content>
+<section class="responsive-section row">
+    <h1 class="col-12 col-lg-3 responsive-section-title">{{title}}</h1>
+
+    <div class="col-12 col-lg-9 responsive-section-content">
+        <ng-content></ng-content>
+    </div>
 </section>

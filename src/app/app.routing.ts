@@ -12,7 +12,8 @@ const appRoutes = [
     { path: 'projects', component: ProjectsComponent },
     { path: 'activities', component: ActivitiesComponent },
     { path: 'documents', component: DocumentsComponent },
-    { path: 'article/:id', component: ArticleComponent },
+    { path: 'projects/:id', component: ArticleComponent },
+    { path: 'activities/:id', component: ArticleComponent },
 ];
 
 export const AppRoutingProviders: any[] = [];

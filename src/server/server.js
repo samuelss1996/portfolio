@@ -1,10 +1,12 @@
 const express = require("express");
+const compression = require("compression");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
 const path = require("path");
 
 const app = express();
 app.use(bodyParser.json());
+app.use(compression());
 
 // Create a link to Angular directory
 let distDir = path.join(__dirname, "../../dist/");
@@ -31,7 +33,11 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
     });
 });
 
-
 app.get("/api/test", (req, res) => {
     res.status(200).json({message: "Hello test!"});
 });
+
+app.all('/*', function(req, res, next) {
+    res.sendFile('index.html', { root: distDir });
+});
+

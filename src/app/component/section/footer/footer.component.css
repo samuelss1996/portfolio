@@ -1,0 +1,15 @@
+:host {
+    margin-top: auto;
+}
+
+footer {
+    background-color: #01579B;
+}
+
+* {
+    color: white !important;
+}
+
+p {
+    margin: 0;
+}
