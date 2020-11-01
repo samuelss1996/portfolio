@@ -24,6 +24,7 @@ import { ArticleListItemComponent } from './component/section/article-list-item/
 import { ArticleComponent } from './component/page/article/article.component';
 import { BadgeListComponent } from './component/section/badge-list/badge-list.component';
 import { ArticleExternalLinksComponent } from './component/section/article-external-links/article-external-links.component';
+import { ProfileComponent } from './component/section/profile/profile.component';
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -43,7 +44,8 @@ registerLocaleData(localeEs);
         ArticleListItemComponent,
         ArticleComponent,
         BadgeListComponent,
-        ArticleExternalLinksComponent
+        ArticleExternalLinksComponent,
+        ProfileComponent
     ],
     imports: [
         Routing,
