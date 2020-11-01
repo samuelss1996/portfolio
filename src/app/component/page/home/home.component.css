@@ -1,13 +1,3 @@
-#skills {
-    list-style: none;
-    padding: 0;
-}
-
-.skill-sublist {
-    list-style: disc;
-    margin-bottom: 2rem;
-}
-
 #home-conclusion {
     background-color: #EEEEEE;
     padding-top: 1.5rem;

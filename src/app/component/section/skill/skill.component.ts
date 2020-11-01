@@ -6,7 +6,9 @@ import {Component, Input, OnInit} from '@angular/core';
     styleUrls: ['./skill.component.css']
 })
 export class SkillComponent implements OnInit {
-    @Input() title: string;
+    public title = 'General purpose languages';
+    public iterations = new Array<number>(6);
+    public languages = ['Java', 'Kotlin', 'C++', 'Python'];
 
     constructor() {
     }

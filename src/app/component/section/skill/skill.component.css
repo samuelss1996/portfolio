@@ -1,3 +1,13 @@
+#skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-sublist {
+    list-style: disc;
+    margin-bottom: 2rem;
+}
+
 .skill-icon {
     width: 2rem;
     border-radius: 1rem;
