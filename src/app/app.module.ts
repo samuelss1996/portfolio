@@ -15,7 +15,7 @@ import {SocialNetworksComponent} from './component/section/social-networks/socia
 import {ResponsiveSectionComponent} from './component/section/responsive-section/responsive-section.component';
 import {FooterComponent} from './component/section/footer/footer.component';
 import {ExperienceComponent} from './component/section/experience/experience.component';
-import {SkillComponent} from './component/section/skill/skill.component';
+import {SkillsComponent} from './component/section/skills/skills.component';
 import { LocalizedDatePipe } from './pipe/localized-date.pipe';
 
 import localeEs from '@angular/common/locales/es';
@@ -40,7 +40,7 @@ registerLocaleData(localeEs);
         ResponsiveSectionComponent,
         FooterComponent,
         ExperienceComponent,
-        SkillComponent,
+        SkillsComponent,
         LocalizedDatePipe,
         ArticleListItemComponent,
         ArticleComponent,
