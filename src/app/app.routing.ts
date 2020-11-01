@@ -7,6 +7,7 @@ import {ActivitiesComponent} from './component/page/activities/activities.compon
 import {DocumentsComponent} from './component/page/documents/documents.component';
 import {ArticleComponent} from './component/page/article/article.component';
 
+// TODO add page not found component
 const appRoutes = [
     { path: '', component: HomeComponent },
     { path: 'projects', component: ProjectsComponent },

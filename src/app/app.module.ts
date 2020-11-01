@@ -29,6 +29,8 @@ import { AboutMeComponent } from './component/section/about-me/about-me.componen
 import { HomeConclusionComponent } from './component/section/home-conclusion/home-conclusion.component';
 registerLocaleData(localeEs);
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -55,6 +57,7 @@ registerLocaleData(localeEs);
         Routing,
         BrowserModule,
         HttpClientModule,
+        BrowserAnimationsModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
