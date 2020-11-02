@@ -1,7 +1,10 @@
-<app-header></app-header>
-
-<main id="content" [@routeAnimations]="outlet && outlet.activatedRouteData">
-    <router-outlet #outlet="outlet"></router-outlet>
+<main id="content" [@routeAnimations]="prepareRoute(outlet)" (@routeAnimations.start)="onAnimationEvent($event)"
+      (@routeAnimations.done)="onAnimationEvent($event)">
+    <app-header></app-header>
+    <div style="position: relative">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <app-footer></app-footer>
 </main>
 
-<app-footer></app-footer>
+

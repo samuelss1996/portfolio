@@ -1,4 +1,12 @@
-:host {
+/*:host {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    height: 100vh;*/
+/*    margin: 0;*/
+/*}*/
+
+#content {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;

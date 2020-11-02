@@ -11,6 +11,11 @@ export const fader =
                     width: '100%'
                 })
             ], {optional: true}),
+            query('footer', [
+                style({
+                    opacity: 0
+                })
+            ], {optional: true}),
             query(':enter', [
                 style({opacity: 0})
             ], {optional: true}),
