@@ -1,10 +1,9 @@
-<main id="content" [@routeAnimations]="prepareRoute(outlet)" (@routeAnimations.start)="onAnimationEvent($event)"
-      (@routeAnimations.done)="onAnimationEvent($event)">
+<div id="root" [@routeAnimations]="prepareRoute(outlet)">
     <app-header></app-header>
-    <div style="position: relative">
+
+    <main id="content">
         <router-outlet #outlet="outlet"></router-outlet>
-    </div>
+    </main>
+
     <app-footer></app-footer>
-</main>
-
-
+</div>
