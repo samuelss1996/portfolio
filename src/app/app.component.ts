@@ -17,18 +17,11 @@ import {AnimationEvent} from '@angular/animations';
 export class AppComponent {
     title = 'Portfolio';
 
-    constructor(private router: Router, private language: LanguageService) {
+    constructor(private router: Router, private language: LanguageService) { }
 
-    }
-
-    public onAnimationEvent(event: AnimationEvent): void {
-
-    }
-
-    prepareRoute(outlet: RouterOutlet): Data {
-        const result = outlet && outlet.activatedRouteData;
-        console.log(outlet);
-
-        return result;
+    onActivate($event: any): void {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 600);
     }
 }

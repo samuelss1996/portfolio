@@ -1,8 +1,8 @@
-<div id="root" [@routeAnimations]="prepareRoute(outlet)">
+<div id="root" [@routeAnimations]="outlet && outlet.activatedRouteData">
     <app-header></app-header>
 
     <main id="content">
-        <router-outlet #outlet="outlet"></router-outlet>
+        <router-outlet #outlet="outlet" (activate)="onActivate($event)"></router-outlet>
     </main>
 
     <app-footer></app-footer>

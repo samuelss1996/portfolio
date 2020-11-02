@@ -12,9 +12,7 @@ export const fader =
                 })
             ], {optional: true}),
             query('footer', [
-                style({
-                    opacity: 0
-                })
+                style({opacity: 0})
             ], {optional: true}),
             query(':enter', [
                 style({opacity: 0})
@@ -30,8 +28,8 @@ export const fader =
 
 export const extend =
     trigger('extend', [
-        state('in', style({ opacity: 0 })),
-        state('out', style({ opacity: 1 })),
+        state('in', style({opacity: 0})),
+        state('out', style({opacity: 1})),
         transition(':enter', [
             style({
                 opacity: 1
