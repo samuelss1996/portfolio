@@ -46,3 +46,9 @@ a {
 a:hover, a:active {
     text-decoration: underline;
 }
+
+@media (pointer: coarse) {
+    .article-list-item-title {
+        text-decoration: underline;
+    }
+}
