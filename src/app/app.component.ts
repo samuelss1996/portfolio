@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LanguageService} from './service/language.service';
 import {Data, NavigationStart, Router, RouterOutlet} from '@angular/router';
-import {extend, fader} from './app.routing.animations';
+import {fader} from './app.routing.animations';
 import {AnimationEvent} from '@angular/animations';
 
 @Component({
@@ -11,7 +11,6 @@ import {AnimationEvent} from '@angular/animations';
     providers: [LanguageService],
     animations: [
         fader,
-        extend
     ]
 })
 export class AppComponent {
@@ -22,6 +21,6 @@ export class AppComponent {
     onActivate($event: any): void {
         setTimeout(() => {
             window.scrollTo(0, 0);
-        }, 600);
+        }, 300);
     }
 }
