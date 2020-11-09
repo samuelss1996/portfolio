@@ -1,7 +1,9 @@
-<app-header></app-header>
+<div id="root" [@routeAnimations]="outlet && outlet.activatedRouteData">
+    <app-header></app-header>
 
-<main id="content">
-    <router-outlet></router-outlet>
-</main>
+    <main id="content">
+        <router-outlet #outlet="outlet" (activate)="onActivate($event)"></router-outlet>
+    </main>
 
-<app-footer></app-footer>
+    <app-footer></app-footer>
+</div>

@@ -7,6 +7,7 @@ import {ActivitiesComponent} from './component/page/activities/activities.compon
 import {DocumentsComponent} from './component/page/documents/documents.component';
 import {ArticleComponent} from './component/page/article/article.component';
 
+// TODO add page not found component
 const appRoutes = [
     { path: '', component: HomeComponent },
     { path: 'projects', component: ProjectsComponent },
@@ -14,6 +15,7 @@ const appRoutes = [
     { path: 'documents', component: DocumentsComponent },
     { path: 'projects/:id', component: ArticleComponent },
     { path: 'activities/:id', component: ArticleComponent },
+    { path: '**', component: HomeComponent },
 ];
 
 export const AppRoutingProviders: any[] = [];
