@@ -1,3 +1,5 @@
+'use strict'
+
 const express = require("express");
 const compression = require("compression");
 const bodyParser = require("body-parser");
@@ -33,11 +35,10 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
     });
 });
 
-app.get("/api/test", (req, res) => {
-    res.status(200).json({message: "Hello test!"});
-});
+const apiRouter = require('./route/api');
+app.use("/api", apiRouter);
 
-app.all('/*', function(req, res, next) {
+app.all('/*', function(req, res) {
     res.sendFile('index.html', { root: distDir });
 });
 
