@@ -3,7 +3,7 @@
 const Document = require('../model/document');
 const Utils = require('./utils');
 
-const ArticleController = {
+const DocumentController = {
 
     getDocuments: function(req, res) {
         Document.find({}, (err, documents) => {
@@ -12,4 +12,4 @@ const ArticleController = {
     }
 };
 
-module.exports = ArticleController;
+module.exports = DocumentController;
