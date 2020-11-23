@@ -11,6 +11,14 @@ const ArticleController = {
         Article.find({category: {$in: categories}}, (err, articles) => {
             return Utils.sendJson(res, err, articles);
         });
+    },
+
+    getArticleById: function(req, res) {
+        const id = req.params.id;
+
+        Article.find({_id: id}, (err, article) => {
+            return Utils.sendJson(res, err, article);
+        });
     }
 };
 
