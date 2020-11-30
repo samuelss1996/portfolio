@@ -66,6 +66,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             }
         })
     ],
+    exports: [TranslateModule],
     providers: [AppRoutingProviders, { provide: LOCALE_ID, useValue: 'es'}],
     bootstrap: [AppComponent]
 })
