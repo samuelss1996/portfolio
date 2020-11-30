@@ -2,14 +2,13 @@ import {TestBed} from '@angular/core/testing';
 
 import {ArticleService} from './article.service';
 import {HttpClientModule} from '@angular/common/http';
-import {Article} from '../../model/Article';
 
 
 function testArticlesByCategory(service: ArticleService, categories: string[], done: DoneFn): void {
     service.getArticlesByCategory(categories).subscribe(result => {
         expect(result.status).toBe(200);
+        const articles = result.data;
 
-        const articles: Article[] = result.data;
         expect(articles.length).toBeGreaterThan(0);
 
         for (const article of articles) {
@@ -47,7 +46,7 @@ describe('ArticleService', () => {
     it('should get article by id', done => {
         service.getArticleById('5fb3fe6957a016937b36de91').subscribe(result => {
             expect(result.status).toBe(200);
-            const article: Article = result.data;
+            const article = result.data;
 
             expect(article._id).not.toBe(undefined);
 

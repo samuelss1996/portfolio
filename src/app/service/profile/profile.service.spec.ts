@@ -20,6 +20,7 @@ describe('ProfileService', () => {
     it('should get about', (done) => {
         service.getAbout().subscribe(result => {
            expect(result.status).toBe(200);
+           expect(result.data.name).toBe('Samuel');
            done();
         }, error => {
             fail();
@@ -29,6 +30,9 @@ describe('ProfileService', () => {
     it('should get experience', (done) => {
         service.getExperience().subscribe(result => {
             expect(result.status).toBe(200);
+            expect(result.data.length).toBeGreaterThan(0);
+            expect(result.data[0].position).not.toBe(undefined);
+
             done();
         }, error => {
             fail();
@@ -38,6 +42,10 @@ describe('ProfileService', () => {
     it('should get skills', (done) => {
         service.getSkills().subscribe(result => {
             expect(result.status).toBe(200);
+            expect(result.data.length).toBeGreaterThan(0);
+            expect(result.data[0].items).not.toBe(undefined);
+            expect(result.data[0].items.length).toBeGreaterThan(0);
+
             done();
         }, error => {
             fail();
