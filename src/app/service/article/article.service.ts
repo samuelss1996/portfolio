@@ -9,7 +9,10 @@ import {Observable} from 'rxjs';
 export class ArticleService {
     private baseUrl = 'article/';
 
-    constructor(private apiService: APIService) {
+    constructor(private apiService: APIService) { }
+
+    getArticlesByCategory(categories: string[]): Observable<any> {
+        return this.apiService.get(this.baseUrl + 'all/' + categories.join(','));
     }
 
     getArticleById(id: string): Observable<any> {
