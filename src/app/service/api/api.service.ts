@@ -12,6 +12,6 @@ export class APIService {
 
     get(url: string, params?: HttpParams): Observable<any> {
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this.http.get(this.baseUrl + url);
+        return this.http.get(this.baseUrl + url, {headers, params});
     }
 }

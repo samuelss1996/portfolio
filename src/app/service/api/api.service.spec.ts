@@ -9,8 +9,7 @@ describe('APIService', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [HttpClientModule],
-            providers: [APIService]
+            imports: [HttpClientModule]
         });
         service = TestBed.inject(APIService);
     });
@@ -20,7 +19,6 @@ describe('APIService', () => {
     });
 
     it('should return api method not found', (done) => {
-        console.log(service.baseUrl);
         service.get('wrongUrl').subscribe(result => {
             fail();
         }, error => {
