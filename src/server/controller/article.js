@@ -16,7 +16,7 @@ const ArticleController = {
     getArticleById: function(req, res) {
         const id = req.params.id;
 
-        Article.find({_id: id}, (err, article) => {
+        Article.findOne({_id: id}, (err, article) => {
             return Utils.sendJson(res, err, article);
         });
     }
