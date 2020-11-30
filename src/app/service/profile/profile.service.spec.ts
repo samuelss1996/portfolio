@@ -19,11 +19,12 @@ describe('ProfileService', () => {
 
     it('should get about', (done) => {
         service.getAbout().subscribe(result => {
-           expect(result.status).toBe(200);
-           expect(result.data.name).toBe('Samuel');
-           done();
+            expect(result.status).toBe(200);
+            expect(result.data.name).toBe('Samuel');
+            done();
         }, error => {
             fail();
+            done();
         });
     });
 
@@ -36,6 +37,7 @@ describe('ProfileService', () => {
             done();
         }, error => {
             fail();
+            done();
         });
     });
 
@@ -49,6 +51,7 @@ describe('ProfileService', () => {
             done();
         }, error => {
             fail();
+            done();
         });
     });
 });

@@ -21,6 +21,7 @@ describe('APIService', () => {
     it('should return api method not found', (done) => {
         service.get('wrongUrl').subscribe(result => {
             fail();
+            done();
         }, error => {
             expect(error.status).toBe(404);
             done();

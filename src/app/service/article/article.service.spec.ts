@@ -4,23 +4,6 @@ import {ArticleService} from './article.service';
 import {HttpClientModule} from '@angular/common/http';
 
 
-function testArticlesByCategory(service: ArticleService, categories: string[], done: DoneFn): void {
-    service.getArticlesByCategory(categories).subscribe(result => {
-        expect(result.status).toBe(200);
-        const articles = result.data;
-
-        expect(articles.length).toBeGreaterThan(0);
-
-        for (const article of articles) {
-            expect(categories).toContain(article.category);
-        }
-
-        done();
-    }, error => {
-        fail();
-    });
-}
-
 describe('ArticleService', () => {
     let service: ArticleService;
 
@@ -57,6 +40,25 @@ describe('ArticleService', () => {
             done();
         }, error => {
             fail();
+            done();
         });
     });
 });
+
+function testArticlesByCategory(service: ArticleService, categories: string[], done: DoneFn): void {
+    service.getArticlesByCategory(categories).subscribe(result => {
+        expect(result.status).toBe(200);
+        const articles = result.data;
+
+        expect(articles.length).toBeGreaterThan(0);
+
+        for (const article of articles) {
+            expect(categories).toContain(article.category);
+        }
+
+        done();
+    }, error => {
+        fail();
+        done();
+    });
+}
