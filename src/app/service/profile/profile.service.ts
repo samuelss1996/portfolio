@@ -15,6 +15,10 @@ export class ProfileService {
         return this.apiService.get(this.baseUrl + 'about');
     }
 
+    getEducation(): Observable<any> {
+        return this.apiService.get(this.baseUrl + 'education');
+    }
+
     getExperience(): Observable<any> {
         return this.apiService.get(this.baseUrl + 'experience');
     }

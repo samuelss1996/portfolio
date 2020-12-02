@@ -7,7 +7,7 @@ const ProfileSchema = Schema({
     name: String,
     surname: String,
     description: [String],
-    interests: [String],
+    interests: [{icon: String, text: String}],
 });
 
 module.exports = mongoose.model("Profile", ProfileSchema);
