@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
 import {LanguageService} from '../../../service/language.service';
 import {ActivatedRoute} from '@angular/router';
+import {i18n} from '../../../Utils';
 
 @Component({
     selector: 'app-projects',
@@ -9,14 +9,7 @@ import {ActivatedRoute} from '@angular/router';
     styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-    public sections = ['Videogames', 'Apps', 'Webs'];
-    public articles = [1, 2, 3, 4];
-
-    public resolverData$: Observable<any>;
-
-    public videogames: any[];
-    public apps: any[];
-    public webs: any[];
+    public articleGroups: any[];
 
     constructor(private language: LanguageService, private route: ActivatedRoute) {
     }
@@ -25,9 +18,11 @@ export class ProjectsComponent implements OnInit {
         this.route.data.subscribe(resolverData => {
             const articles = resolverData.response.data;
 
-            this.videogames = articles.filter(article => article.category === 'videogame');
-            this.apps = articles.filter(article => article.category === 'app');
-            this.webs = articles.filter(article => article.category === 'web');
+            this.articleGroups = [
+                {title: i18n('Videogames'), articles: articles.filter(article => article.category === 'videogame')},
+                {title: i18n('Apps'), articles: articles.filter(article => article.category === 'app')},
+                {title: i18n('Webs'), articles: articles.filter(article => article.category === 'web')}
+            ];
         });
     }
 }

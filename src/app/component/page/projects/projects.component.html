@@ -1,22 +1,8 @@
 <div class="container">
-    <section class="mb-3">
-        <h1 class="my-4" translate>Videogames</h1>
+    <section class="mb-3" *ngFor="let articleGroup of articleGroups">
+        <h1 class="my-4" translate>{{articleGroup.title}}</h1>
         <ul class="article-list row mx-n2">
-            <app-article-list-item *ngFor="let article of videogames" [article]="article" class="col-12 col-md-6 col-lg-4 px-4"></app-article-list-item>
-        </ul>
-    </section>
-
-    <section class="mb-3">
-        <h1 class="my-4" translate>Apps</h1>
-        <ul class="article-list row mx-n2">
-            <app-article-list-item *ngFor="let article of apps" [article]="article" class="col-12 col-md-6 col-lg-4 px-4"></app-article-list-item>
-        </ul>
-    </section>
-
-    <section class="mb-3">
-        <h1 class="my-4" translate>Webs</h1>
-        <ul class="article-list row mx-n2">
-            <app-article-list-item *ngFor="let article of webs" [article]="article" class="col-12 col-md-6 col-lg-4 px-4"></app-article-list-item>
+            <app-article-list-item *ngFor="let article of articleGroup.articles" [article]="article" class="col-12 col-md-6 col-lg-4 px-4"></app-article-list-item>
         </ul>
     </section>
 </div>
