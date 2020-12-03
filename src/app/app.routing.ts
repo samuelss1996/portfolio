@@ -24,4 +24,4 @@ const appRoutes = [
 ];
 
 export const AppRoutingProviders: any[] = [];
-export const Routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);
+export const Routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes, {urlUpdateStrategy: 'eager'});
