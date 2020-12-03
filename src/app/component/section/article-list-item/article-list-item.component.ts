@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import {ActivatedRoute, Router} from '@angular/router';
     styleUrls: ['./article-list-item.component.css']
 })
 export class ArticleListItemComponent implements OnInit {
+    @Input() article: any;
     public mouseOver: boolean;
 
     constructor() {
