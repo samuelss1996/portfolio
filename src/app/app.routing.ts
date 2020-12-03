@@ -9,13 +9,14 @@ import {ArticleComponent} from './component/page/article/article.component';
 import {HomeResolver} from './resolver/home.resolver';
 import {ProjectsResolver} from './resolver/projects.resolver';
 import {ActivitiesResolver} from './resolver/activities.resolver';
+import {DocumentsResolver} from './resolver/documents.resolver';
 
 // TODO add page not found component
 const appRoutes = [
     { path: '', component: HomeComponent, resolve: { response: HomeResolver } },
     { path: 'projects', component: ProjectsComponent, resolve: { response: ProjectsResolver } },
     { path: 'activities', component: ActivitiesComponent, resolve: { response: ActivitiesResolver } },
-    { path: 'documents', component: DocumentsComponent },
+    { path: 'documents', component: DocumentsComponent, resolve: { response: DocumentsResolver } },
     { path: 'projects/:id', component: ArticleComponent },
     { path: 'activities/:id', component: ArticleComponent },
     { path: '**', component: HomeComponent },
