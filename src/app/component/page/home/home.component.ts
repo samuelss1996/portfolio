@@ -9,12 +9,20 @@ import {Observable} from 'rxjs';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    public resolverData$: Observable<any>;
+    public about: any;
+    public education: any;
+    public experience: any;
+    public skills: any;
 
     constructor(private language: LanguageService, private route: ActivatedRoute) {
     }
 
     ngOnInit(): void {
-        this.resolverData$ = this.route.data;
+        this.route.data.subscribe(resolverData => {
+            this.about = resolverData.response.about.data;
+            this.education = resolverData.response.education.data;
+            this.experience = resolverData.response.experience.data;
+            this.skills = resolverData.response.skills.data;
+        });
     }
 }

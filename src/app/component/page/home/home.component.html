@@ -1,13 +1,11 @@
-<ng-container *ngIf="resolverData$ | async as resolverData">
-    <div class="container">
-        <div class="row">
-            <app-profile [about]="resolverData.response.about.data" [experience]="resolverData.response.experience.data" class="col-12 col-lg-3 pr-lg-5"></app-profile>
-            <app-about-me [about]="resolverData.response.about.data" [education]="resolverData.response.education.data" class="col-12 col-lg-9 pl-lg-4 mt-4 mt-lg-0"></app-about-me>
-        </div>
-
-        <app-experience [experience]="resolverData.response.experience.data"></app-experience>
-        <app-skills [skills]="resolverData.response.skills.data"></app-skills>
+<div class="container">
+    <div class="row">
+        <app-profile [about]="about" [experience]="experience" class="col-12 col-lg-3 pr-lg-5"></app-profile>
+        <app-about-me [about]="about" [education]="education" class="col-12 col-lg-9 pl-lg-4 mt-4 mt-lg-0"></app-about-me>
     </div>
 
-    <app-home-conclusion></app-home-conclusion>
-</ng-container>
+    <app-experience [experience]="experience"></app-experience>
+    <app-skills [skills]="skills"></app-skills>
+</div>
+
+<app-home-conclusion></app-home-conclusion>

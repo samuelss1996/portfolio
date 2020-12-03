@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
 import {LanguageService} from '../../../service/language.service';
 import {ActivatedRoute} from '@angular/router';
 
