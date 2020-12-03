@@ -12,8 +12,7 @@ export class LocalizedDatePipe implements PipeTransform {
     constructor(private translateService: TranslateService) { }
 
     private static parseDate(value: string): Date {
-        const parts = value.split('-');
-        return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+        return new Date(value);
     }
 
     transform(value: string, pattern: string = 'shortDate'): any {

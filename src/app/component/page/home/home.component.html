@@ -5,7 +5,7 @@
             <app-about-me [about]="resolverData.response.about.data" [education]="resolverData.response.education.data" class="col-12 col-lg-9 pl-lg-4 mt-4 mt-lg-0"></app-about-me>
         </div>
 
-        <app-experience></app-experience>
+        <app-experience [experience]="resolverData.response.experience.data"></app-experience>
         <app-skills></app-skills>
     </div>
 

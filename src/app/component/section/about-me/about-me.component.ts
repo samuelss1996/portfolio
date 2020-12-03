@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Utils} from '../../../Utils';
 
 @Component({
     selector: 'app-about-me',
@@ -13,10 +14,6 @@ export class AboutMeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.education.sort((a, b) => this.compareYears(a.year_end, b.year_end));
-    }
-
-    compareYears(a: string, b: string): number {
-        return parseInt(a, 10) < parseInt(b, 10) ? 1 : -1;
+        this.education.sort((a, b) => Utils.compareYearsDescending(a.year_end, b.year_end));
     }
 }
