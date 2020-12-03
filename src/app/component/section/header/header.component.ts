@@ -1,17 +1,25 @@
 import {Component, OnInit} from '@angular/core';
 import {LanguageService} from '../../../service/language.service';
+import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+    public loading = true;
 
-    constructor(private language: LanguageService) {
+    constructor(private router: Router, private language: LanguageService) {
+        this.router.events.subscribe(event => this.handleRoutingEvents(event));
     }
 
-    ngOnInit(): void {
+    handleRoutingEvents(event: Event): void {
+        if (event instanceof NavigationStart) {
+            this.loading = true;
+        } else if (event instanceof NavigationEnd) {
+            this.loading = false;
+        }
     }
 
     changeLanguage(): void {
