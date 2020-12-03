@@ -1,47 +1,12 @@
 <article class="container">
     <div class="row mb-5">
         <div class="col-12 col-lg-9 mx-auto">
-            <h1>Under Surveillance ({{id}})</h1>
+            <h1>{{article.title}}</h1>
 
-            <app-badge-list></app-badge-list>
-            <app-article-external-links></app-article-external-links>
-
-            <h2>Introducción</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-
-            <img class="img-responsive" src="assets/img/placeholder-pic.png" alt=""/>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p>
-
-            <div class="video-responsive">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/W0Dk2zUCjzs" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
-
-            <h2>Download</h2>
-            <ul>
-                <li>
-                    <strong>Under Surveillance (Windows)</strong> -
-                    <span>UnderSurveillance.zip</span> -
-                    <a href="" target="_blank">Download</a>
-                </li>
-            </ul>
+            <app-badge-list [tags]="article.tags"></app-badge-list>
+            <app-article-external-links [links]="article.external_links"></app-article-external-links>
         </div>
+
+        <div [innerHTML]="article.content"></div>
     </div>
 </article>
