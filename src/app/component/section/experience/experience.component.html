@@ -1,21 +1,21 @@
 <app-responsive-section [title]="'Experience' | translate">
     <div id="experience-wrapper">
-        <div class="experience-item" *ngFor="let iteration of iterations">
+        <div class="experience-item" *ngFor="let expItem of experience">
             <div class="row align-items-center experience-item-header">
                 <div class="col-auto">
-                    <img src="{{imageSrc}}" alt="">
+                    <img src="{{expItem.icon}}" alt="">
                 </div>
 
                 <div class="col date-title-corporation">
-                    <h6>{{dayStart | localizedDate}} - {{dayEnd | localizedDate}}</h6>
-                    <h4>{{title}}</h4>
-                    <h5>{{corporation}}</h5>
+                    <h6>{{expItem.date_start | localizedDate}} - {{expItem.date_end | localizedDate}}</h6>
+                    <h4>{{expItem.position}}</h4>
+                    <h5>{{expItem.company}}</h5>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col experience-description">
-                    <p class="mini">{{description}}</p>
+                    <p class="mini">{{expItem.description}}</p>
                 </div>
             </div>
         </div>

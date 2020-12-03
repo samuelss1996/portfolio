@@ -2,6 +2,7 @@
 
 const Article = require('../model/article');
 const Utils = require('./utils');
+const fs = require('fs');
 
 const ArticleController = {
 
@@ -16,8 +17,16 @@ const ArticleController = {
     getArticleById: function(req, res) {
         const id = req.params.id;
 
-        Article.find({_id: id}, (err, article) => {
-            return Utils.sendJson(res, err, article);
+        Article.findOne({_id: id}, (err, article) => {
+            fs.readFile('src/server/assets/html/article/' + article.content, 'utf8', (fileError, data) => {
+               if(!fileError) {
+                   article.content = data;
+               } else {
+                   article.content = 'Error';
+               }
+
+               return Utils.sendJson(res, err, article);
+            });
         });
     }
 };

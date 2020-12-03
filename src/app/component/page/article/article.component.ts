@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {LanguageService} from '../../../service/language.service';
+import {HttpClient} from '@angular/common/http';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-article',
@@ -7,14 +10,19 @@ import {ActivatedRoute} from '@angular/router';
     styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-    id: string;
+    public article: any;
 
-    constructor(private route: ActivatedRoute) {
-    }
+    constructor(
+        private language: LanguageService,
+        private route: ActivatedRoute,
+        private http: HttpClient,
+        private sanitizer: DomSanitizer
+    ) { }
 
     ngOnInit(): void {
-        this.route.params.subscribe(value => {
-            this.id = value.id;
+        this.route.data.subscribe(resolverData => {
+            this.article = resolverData.response.data;
+            this.article.content = this.sanitizer.bypassSecurityTrustHtml(this.article.content);
         });
     }
 }

@@ -30,6 +30,7 @@ import { HomeConclusionComponent } from './component/section/home-conclusion/hom
 registerLocaleData(localeEs);
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
     declarations: [
@@ -64,8 +65,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        })
+        }),
+        MatProgressBarModule
     ],
+    exports: [TranslateModule],
     providers: [AppRoutingProviders, { provide: LOCALE_ID, useValue: 'es'}],
     bootstrap: [AppComponent]
 })

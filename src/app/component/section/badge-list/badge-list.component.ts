@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-badge-list',
@@ -6,11 +6,11 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./badge-list.component.css']
 })
 export class BadgeListComponent implements OnInit {
+    @Input() tags: string[];
 
     constructor() {
     }
 
     ngOnInit(): void {
     }
-
 }

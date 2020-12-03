@@ -1,40 +1,22 @@
 <section id="about-me">
     <h1 translate>About me</h1>
-    <p translate>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-        ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est
-        laborum.</p>
+    <p>{{about.description}}</p>
 
     <div class="row" id="about-bullets">
         <div class="col-12 col-lg-6">
             <h4 translate>Interests</h4>
             <ul id="interests" class="fa-ul">
-                <li translate><span class="fa-li"><i class="fas fa-gamepad"></i></span>Videogames development</li>
-                <li translate><span class="fa-li"><i class="fab fa-android"></i></span>Android applications
-                    development
-                </li>
-                <li translate><span class="fa-li"><i class="fas fa-globe"></i></span>Web applications development
-                </li>
+                <li *ngFor="let interest of about.interests"><span class="fa-li"><i class="{{interest.icon}}"></i></span>{{interest.text}}</li>
             </ul>
         </div>
 
         <div class="col-12 col-lg-6">
             <h4 translate>Education</h4>
             <ul id="education" class="fa-ul">
-                <li>
+                <li *ngFor="let eduItem of education">
                     <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
-                    <span translate>MsC in Game Design and Technology</span>
-                    <h5 translate>University of Gothenburg (2018 - 2020)</h5>
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
-                    <span translate>BsC in Computer Engineering</span>
-                    <h5 translate>University of Santiago de Compostela (2014 - 2018)</h5>
+                    <span>{{eduItem.degree}}</span>
+                    <h5>{{eduItem.university}} ({{eduItem.year_start}} - {{eduItem.year_end}})</h5>
                 </li>
             </ul>
         </div>

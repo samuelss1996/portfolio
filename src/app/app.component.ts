@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LanguageService} from './service/language.service';
-import {Data, NavigationStart, Router, RouterOutlet} from '@angular/router';
+import {Data, Event, NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
 import {fader} from './app.routing.animations';
-import {AnimationEvent} from '@angular/animations';
 
 @Component({
     selector: 'app-root',
@@ -14,9 +13,17 @@ import {AnimationEvent} from '@angular/animations';
     ]
 })
 export class AppComponent {
-    title = 'Portfolio';
+    public loading = true;
 
     constructor(private router: Router, private language: LanguageService) { }
+
+    handleRoutingEvents(event: Event): void {
+        if (event instanceof NavigationStart) {
+            this.loading = true;
+        } else if (event instanceof NavigationEnd) {
+            this.loading = false;
+        }
+    }
 
     onActivate($event: any): void {
         setTimeout(() => {
