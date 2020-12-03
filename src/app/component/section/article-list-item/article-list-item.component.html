@@ -1,6 +1,6 @@
 <li class="mb-5">
     <div class="article-list-item" (click)="mouseOver = true" (mouseenter)="mouseOver = true" (mouseleave)="mouseOver = false">
-        <a routerLink="/article/{{article._id}}">
+        <a routerLink="{{article._id}}">
             <div class="article-thumbnail-wrapper">
                 <img class="img-responsive article-thumbnail" src="{{article.picture}}" alt=""/>
                 <h1 class="read-more-link" [class.hidden]="!mouseOver" translate>Read more</h1>

@@ -18,7 +18,8 @@ const appRoutes = [
     { path: 'projects', component: ProjectsComponent, resolve: { response: ProjectsResolver } },
     { path: 'activities', component: ActivitiesComponent, resolve: { response: ActivitiesResolver } },
     { path: 'documents', component: DocumentsComponent, resolve: { response: DocumentsResolver } },
-    { path: 'article/:id', component: ArticleComponent, resolve: { response: ArticleResolver } },
+    { path: 'projects/:id', component: ArticleComponent, resolve: { response: ArticleResolver } },
+    { path: 'activities/:id', component: ArticleComponent, resolve: { response: ArticleResolver } },
     { path: '**', component: HomeComponent, resolve: { response: HomeResolver } },
 ];
 

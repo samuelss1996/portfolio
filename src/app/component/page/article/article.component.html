@@ -5,8 +5,8 @@
 
             <app-badge-list [tags]="article.tags"></app-badge-list>
             <app-article-external-links [links]="article.external_links"></app-article-external-links>
-        </div>
 
-        <div [innerHTML]="article.content"></div>
+            <div [outerHTML]="article.content"></div>
+        </div>
     </div>
 </article>
