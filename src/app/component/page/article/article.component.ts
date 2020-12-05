@@ -6,6 +6,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 
 // TODO maybe make all images links to themselves to watch bigger
 // TODO maybe make all links to target blank
+// TODO replace every itch.io picture with a good quality one
+// TODO add black semi-transparent overlay to "read more"
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
