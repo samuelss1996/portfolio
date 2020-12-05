@@ -4,6 +4,7 @@ import {LanguageService} from '../../../service/language.service';
 import {HttpClient} from '@angular/common/http';
 import {DomSanitizer} from '@angular/platform-browser';
 
+// TODO maybe make all images links to themselves to watch bigger
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
