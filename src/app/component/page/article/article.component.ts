@@ -11,6 +11,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 // TODO add wanna see more projects? go to github in projects page
 // TODO process local links as router link
 // TODO replace every videogame with video game
+// TODO maybe add border to article list thumbnail
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
