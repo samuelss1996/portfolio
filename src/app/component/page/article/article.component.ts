@@ -12,6 +12,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 // TODO process local links as router link
 // TODO replace every videogame with video game
 // TODO maybe add border to article list thumbnail
+// TODO put links to the other dudes
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
