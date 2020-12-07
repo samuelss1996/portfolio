@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
-import {HttpClient} from '@angular/common/http';
 import {DomSanitizer} from '@angular/platform-browser';
 
 // TODO maybe make all images links to themselves to watch bigger
@@ -24,7 +23,6 @@ export class ArticleComponent implements OnInit {
     constructor(
         private language: LanguageService,
         private route: ActivatedRoute,
-        private http: HttpClient,
         private sanitizer: DomSanitizer
     ) { }
 
