@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Utils} from '../../../Utils';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-about-me',
@@ -10,7 +11,7 @@ export class AboutMeComponent implements OnInit {
     @Input() about: any;
     @Input() education: any;
 
-    constructor() {
+    constructor(private sanitizer: DomSanitizer) {
     }
 
     ngOnInit(): void {
