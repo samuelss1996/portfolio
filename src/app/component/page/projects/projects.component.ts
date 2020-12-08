@@ -19,7 +19,7 @@ export class ProjectsComponent implements OnInit {
             const articles = resolverData.response.data;
 
             this.articleGroups = [
-                {title: i18n('Videogames'), articles: articles.filter(article => article.category === 'videogame')},
+                {title: i18n('Video games'), articles: articles.filter(article => article.category === 'videogame')},
                 {title: i18n('Apps'), articles: articles.filter(article => article.category === 'app')},
                 {title: i18n('Webs'), articles: articles.filter(article => article.category === 'web')}
             ];
