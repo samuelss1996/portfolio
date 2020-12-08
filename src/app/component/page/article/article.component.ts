@@ -12,6 +12,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 // TODO replace every videogame with video game
 // TODO maybe add border to article list thumbnail
 // TODO put links to the other dudes
+// TODO add links to companies in experience?
 // TODO fill portfolio article
 @Component({
     selector: 'app-article',
