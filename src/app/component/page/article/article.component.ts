@@ -3,8 +3,6 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO replace every videogame with video game
-// TODO maybe add border to article list thumbnail
 // TODO put links to the other dudes
 // TODO add links to companies in experience?
 // TODO add wanna see more projects? go to github in projects page
