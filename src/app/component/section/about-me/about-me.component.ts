@@ -16,9 +16,5 @@ export class AboutMeComponent implements OnInit {
 
     ngOnInit(): void {
         this.education.sort((a, b) => Utils.compareYearsDescending(a.year_end, b.year_end));
-        //
-        // for (let i = 0; i < this.about.description.length; i++) {
-        //     this.about.description[i] = this.sanitizer.bypassSecurityTrustHtml(this.about.description[i]);
-        // }
     }
 }
