@@ -3,7 +3,6 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO put links to the other dudes
 // TODO add links to companies in experience?
 // TODO add wanna see more projects? go to github in projects page
 // TODO implement dynamic img resolution to reduce loading (?)
