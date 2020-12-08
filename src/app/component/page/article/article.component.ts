@@ -3,7 +3,6 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO add black semi-transparent overlay to "read more"
 // TODO replace every videogame with video game
 // TODO maybe add border to article list thumbnail
 // TODO put links to the other dudes
