@@ -3,9 +3,10 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO implement dynamic img resolution to reduce loading (?)
 // TODO translate
 // TODO update and paste CV as pdf
+// TODO favicon
+// TODO inspect with anything
 // TODO fill portfolio article
 @Component({
     selector: 'app-article',

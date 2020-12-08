@@ -7,7 +7,3 @@ export class Utils {
         return a < b ? 1 : -1;
     }
 }
-
-export function i18n(str: string): string {
-    return str;
-}

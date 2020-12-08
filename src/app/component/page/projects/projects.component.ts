@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LanguageService} from '../../../service/language.service';
 import {ActivatedRoute} from '@angular/router';
-import {i18n} from '../../../Utils';
+import { marker as _ } from '@biesbjerg/ngx-translate-extract-marker';
 
 @Component({
     selector: 'app-projects',
@@ -19,9 +19,9 @@ export class ProjectsComponent implements OnInit {
             const articles = resolverData.response.data;
 
             this.articleGroups = [
-                {title: i18n('Video games'), articles: articles.filter(article => article.category === 'videogame')},
-                {title: i18n('Apps'), articles: articles.filter(article => article.category === 'app')},
-                {title: i18n('Webs'), articles: articles.filter(article => article.category === 'web')}
+                {title: _('Video games'), articles: articles.filter(article => article.category === 'videogame')},
+                {title: _('Apps'), articles: articles.filter(article => article.category === 'app')},
+                {title: _('Webs'), articles: articles.filter(article => article.category === 'web')}
             ];
         });
     }

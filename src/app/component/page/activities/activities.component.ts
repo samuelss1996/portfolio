@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LanguageService} from '../../../service/language.service';
 import {ActivatedRoute} from '@angular/router';
-import {i18n} from '../../../Utils';
+import { marker as _ } from '@biesbjerg/ngx-translate-extract-marker';
 
 @Component({
     selector: 'app-activities',
@@ -19,7 +19,7 @@ export class ActivitiesComponent implements OnInit {
             const articles = resolverData.response.data;
 
             this.articleGroups = [
-                {title: i18n('Activities'), articles: articles.filter(article => article.category === 'activity')}
+                {title: _('Activities'), articles: articles.filter(article => article.category === 'activity')}
             ];
         });
     }

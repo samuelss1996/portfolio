@@ -10,7 +10,7 @@ import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 export class HeaderComponent {
     public loading = true;
 
-    constructor(private router: Router, private language: LanguageService) {
+    constructor(public router: Router, private language: LanguageService) {
         this.router.events.subscribe(event => this.handleRoutingEvents(event));
     }
 

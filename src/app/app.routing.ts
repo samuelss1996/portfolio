@@ -14,14 +14,17 @@ import {ArticleResolver} from './resolver/article.resolver';
 
 // TODO add page not found component
 const appRoutes = [
-    { path: '', component: HomeComponent, resolve: { response: HomeResolver } },
-    { path: 'projects', component: ProjectsComponent, resolve: { response: ProjectsResolver } },
-    { path: 'activities', component: ActivitiesComponent, resolve: { response: ActivitiesResolver } },
-    { path: 'documents', component: DocumentsComponent, resolve: { response: DocumentsResolver } },
-    { path: 'projects/:id', component: ArticleComponent, resolve: { response: ArticleResolver } },
-    { path: 'activities/:id', component: ArticleComponent, resolve: { response: ArticleResolver } },
-    { path: '**', component: HomeComponent, resolve: { response: HomeResolver } },
+    {path: '', component: HomeComponent, resolve: {response: HomeResolver}},
+    {path: 'projects', component: ProjectsComponent, resolve: {response: ProjectsResolver}},
+    {path: 'activities', component: ActivitiesComponent, resolve: {response: ActivitiesResolver}},
+    {path: 'documents', component: DocumentsComponent, resolve: {response: DocumentsResolver}},
+    {path: 'projects/:id', component: ArticleComponent, resolve: {response: ArticleResolver}},
+    {path: 'activities/:id', component: ArticleComponent, resolve: {response: ArticleResolver}},
+    {path: '**', component: HomeComponent, resolve: {response: HomeResolver}},
 ];
 
 export const AppRoutingProviders: any[] = [];
-export const Routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes, {urlUpdateStrategy: 'eager'});
+export const Routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes, {
+    urlUpdateStrategy: 'eager',
+    onSameUrlNavigation: 'reload'
+});
