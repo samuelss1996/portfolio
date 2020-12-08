@@ -13,6 +13,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 // TODO maybe add border to article list thumbnail
 // TODO put links to the other dudes
 // TODO add links to companies in experience?
+// TODO update and paste CV as pdf
 // TODO fill portfolio article
 @Component({
     selector: 'app-article',
