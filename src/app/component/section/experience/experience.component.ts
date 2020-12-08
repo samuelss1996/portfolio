@@ -10,6 +10,6 @@ export class ExperienceComponent implements OnInit {
     @Input() experience: any;
 
     ngOnInit(): void {
-        this.experience.sort((a, b) => Utils.compareYearsDescending(a, b));
+        this.experience.sort((a, b) => Utils.compareDatesDescending(new Date(a.date_end), new Date(b.date_end)));
     }
 }
