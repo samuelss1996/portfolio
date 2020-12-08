@@ -33,6 +33,8 @@ export class ArticleComponent implements OnInit {
     ngOnInit(): void {
         this.route.data.subscribe(resolverData => {
             this.article = resolverData.response.data;
+
+            this.article.content = this.article.content.replace(/(<img .*? src="(.*?)".*?\/>)/gm, '<a target="_blank" href="$2">$1</a>');
             this.article.content = this.sanitizer.bypassSecurityTrustHtml(this.article.content);
         });
     }
