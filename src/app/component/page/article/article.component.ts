@@ -4,6 +4,7 @@ import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
 // TODO translate
+// TODO duplicated ids in article htmls
 // TODO update and paste CV as pdf
 // TODO favicon
 // TODO inspect with anything
