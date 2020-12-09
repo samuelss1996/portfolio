@@ -3,9 +3,11 @@
 const express = require("express");
 const compression = require("compression");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
+
+const mongoose = require("mongoose");
+const mongooseIntl = require("mongoose-intl")
 
 // Create a link to Angular directory
 let distDir = path.join(__dirname, "../../dist/");
@@ -26,6 +28,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+mongoose.plugin(mongooseIntl, { languages: ['en', 'es'], defaultLanguage: 'en' });
 mongoose.connect("mongodb://localhost:27017/portfolio", {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log("Connection successful");

@@ -10,7 +10,7 @@ const ArticleController = {
         const categories = req.params.categories.split(',');
 
         Article.find({category: {$in: categories}}, (err, articles) => {
-            return Utils.sendJson(res, err, articles);
+            return Utils.sendJson(req, res, err, articles);
         });
     },
 
@@ -25,7 +25,7 @@ const ArticleController = {
                    article.content = 'Error';
                }
 
-               return Utils.sendJson(res, err, article);
+               return Utils.sendJson(req, res, err, article);
             });
         });
     }
