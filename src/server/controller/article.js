@@ -18,6 +18,8 @@ const ArticleController = {
         const id = req.params.id;
 
         Article.findOne({_id: id}, (err, article) => {
+            Utils.setLanguage(req, article);
+
             fs.readFile('src/server/assets/html/article/' + article.content, 'utf8', (fileError, data) => {
                if(!fileError) {
                    article.content = data;
