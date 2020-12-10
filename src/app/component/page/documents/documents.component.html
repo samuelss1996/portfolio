@@ -9,7 +9,7 @@
                 <ul>
                     <li *ngFor="let document of documentGroup.documents">
                         <h4>{{document.title}}</h4>
-                        <p class="mb-1" *ngFor="let paragraph of document.description">{{paragraph}}</p>
+                        <p class="mb-1">{{document.description}}</p>
                         <p *ngIf="document.link"><a target="_blank" href="{{document.link}}" translate>Download as PDF</a></p>
                         <p *ngIf="!document.link" translate>[NOT AVAILABLE YET]</p>
                     </li>
