@@ -4,11 +4,11 @@ import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
 // TODO translate
+// TODO fill portfolio article
 // TODO duplicated ids in article htmls
 // TODO update and paste CV as pdf
 // TODO favicon
 // TODO inspect with anything
-// TODO fill portfolio article
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
