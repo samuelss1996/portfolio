@@ -1,62 +1,62 @@
-<h2 id="introduction">IntroducciÛn</h2>
-<p>Blitter es una app que permite al usuario escanear un ticket usando la c·mara y compartir los gastos con amigos y familiares.</p>
-<p>Usando Blitter, ya no tendr·s que hacer c·lculos complejos para saber cuanto dinero tiene que pagar cada persona cuando vais de compras o a un restaurante juntos.</p>
-<p>Simplemente tienes que escanear el ticket usando tu c·mara. Blitter reconocer· los productos y sus precios. DespuÈs, podr·s asignar cada producto a una o m·s personas. Finalmente, Blitter calcular· por ti cuanto tiene que pagar cada persona.</p>
-<p>Adem·s, puedes compartir el desglose con tus amigos usando cualquier aplicaciÛn.</p>
+<h2 id="introduction">Introducci√≥n</h2>
+<p>Blitter es una app que permite al usuario escanear un ticket usando la c√°mara y compartir los gastos con amigos y familiares.</p>
+<p>Usando Blitter, ya no tendr√°s que hacer c√°lculos complejos para saber cuanto dinero tiene que pagar cada persona cuando vais de compras o a un restaurante juntos.</p>
+<p>Simplemente tienes que escanear el ticket usando tu c√°mara. Blitter reconocer√° los productos y sus precios. Despu√©s, podr√°s asignar cada producto a una o m√°s personas. Finalmente, Blitter calcular√° por ti cuanto tiene que pagar cada persona.</p>
+<p>Adem√°s, puedes compartir el desglose con tus amigos usando cualquier aplicaci√≥n.</p>
 
 <h2 id="development">Desarrollo</h2>
 <p>El desarrollo del app se puede dividir en cuatro fases.</p>
 
-<h3 id="phase-1-requirements-specification">Fase 1: EspecificaciÛn de requisitos</h3>
-<p>Una lista de los requisitos funcionales que se pretendÌan implementar fue elaborada. Se puede consultar la lista de requisitos aquÌ:</p>
+<h3 id="phase-1-requirements-specification">Fase 1: Especificaci√≥n de requisitos</h3>
+<p>Una lista de los requisitos funcionales que se pretend√≠an implementar fue elaborada. Se puede consultar la lista de requisitos aqu√≠:</p>
 <ul>
 	<li><a target="_blank" href="https://github.com/samuelss1996/blitter/blob/master/pre-dev/analysis/requirements.md">https://github.com/samuelss1996/blitter/blob/master/pre-dev/analysis/requirements.md</a></li>
 </ul>
 
 <h3 id="phase-2-ui-prototyping">Fase 2: Prototipado de la UI</h3>
-<p>Un prototipo de la interfaz de usuario fue elaborado tomando en consideraciÛn los requisitos especificados en la fase previa. El prototipo fue creado uasando <a target="_blank" href="https://www.adobe.com/es/products/xd.html">Adobe XD</a></p>
-<p>AquÌ se muestran algunas capturas de pantalla de este prototipo.</p>
+<p>Un prototipo de la interfaz de usuario fue elaborado tomando en consideraci√≥n los requisitos especificados en la fase previa. El prototipo fue creado uasando <a target="_blank" href="https://www.adobe.com/es/products/xd.html">Adobe XD</a></p>
+<p>Aqu√≠ se muestran algunas capturas de pantalla de este prototipo.</p>
 
 <div class="row">
 	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/blitter/prototype-1.png" alt=""/></div>
 	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/blitter/prototype-2.png" alt=""/></div>
 </div>
 
-<p>El fichero completo del prototipo se puede descargar aquÌ: </p>
+<p>El fichero completo del prototipo se puede descargar aqu√≠: </p>
 <ul>
 	<li><a target="_blank" href="https://github.com/samuelss1996/blitter/blob/master/pre-dev/prototype/blitter.xd">https://github.com/samuelss1996/blitter/blob/master/pre-dev/prototype/blitter.xd</a></li>
 </ul>
 
-<h3 id="phase-3-software-design">Fase 3: DiseÒo de software</h3>
-<p>Una vez definidos los requisitos de la app y como el usuario va a interactuar con la misma en base al prototipo de la UI, era el momento de diseÒar la arquitectura general del proyecto. Para elaborarla se usÛ <a target="_blank" href="https://staruml.io/">StarUML2</a>.</p>
-<p>AquÌ se muestran algunas capturas de los diagramas.</p>
+<h3 id="phase-3-software-design">Fase 3: Dise√±o de software</h3>
+<p>Una vez definidos los requisitos de la app y como el usuario va a interactuar con la misma en base al prototipo de la UI, era el momento de dise√±ar la arquitectura general del proyecto. Para elaborarla se us√≥ <a target="_blank" href="https://staruml.io/">StarUML2</a>.</p>
+<p>Aqu√≠ se muestran algunas capturas de los diagramas.</p>
 
 <div class="row">
 	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/blitter/design-1.png" alt=""/></div>
 	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/blitter/design-2.png" alt=""/></div>
 </div>
 
-<p>El archivo completo de StarUML2 puede ser descargado aquÌ:</p>
+<p>El archivo completo de StarUML2 puede ser descargado aqu√≠:</p>
 <ul>
 	<li><a target="_blank" href="https://github.com/samuelss1996/blitter/blob/master/pre-dev/design/blitter.mdj">https://github.com/samuelss1996/blitter/blob/master/pre-dev/design/blitter.mdj</a></li>
 </ul>
 
-<h3 id="phase-4-implementation">Fase 4: ImplementaciÛn</h3>
-<p>Bas·ndose en los recursos creados en las fases, se comenzÛ con la fase de implementaciÛn.</p>
-<p>La app fue programada para Android 4.1+ usando Android Studio como IDE y Kotlin como lenguaje de programaciÛn. El cÛdigo fuente se puede encontrar en el repositorio de GitHub:</p>
+<h3 id="phase-4-implementation">Fase 4: Implementaci√≥n</h3>
+<p>Bas√°ndose en los recursos creados en las fases, se comenz√≥ con la fase de implementaci√≥n.</p>
+<p>La app fue programada para Android 4.1+ usando Android Studio como IDE y Kotlin como lenguaje de programaci√≥n. El c√≥digo fuente se puede encontrar en el repositorio de GitHub:</p>
 <ul>
 	<li><a target="_blank" href="https://github.com/samuelss1996/blitter">https://github.com/samuelss1996/blitter</a></li>
 </ul>
 
-<h3 id="phase-5-publishing">Fase 5: PublicaciÛn</h3>
-<p>Finalmente, cuando la app estaba totalmente desarrollada, era momento de publicarla en la <em>Google Play Store</em>. Se puede consultar aquÌ:</p>
+<h3 id="phase-5-publishing">Fase 5: Publicaci√≥n</h3>
+<p>Finalmente, cuando la app estaba totalmente desarrollada, era momento de publicarla en la <em>Google Play Store</em>. Se puede consultar aqu√≠:</p>
 <ul>
 	<li><a target="_blank" href="https://play.google.com/store/apps/details?id=es.soutullo.blitter">https://play.google.com/store/apps/details?id=es.soutullo.blitter</a></li>
 </ul>
-<p>La app tuvo un Èxito relativo, consiguiendo m·s de 10.000 descargas y una puntuaciÛn promedio de los usuarios de 4,5 de 5.</p>
+<p>La app tuvo un √©xito relativo, consiguiendo m√°s de 10.000 descargas y una puntuaci√≥n promedio de los usuarios de 4,5 de 5.</p>
 
 <h2 id="screenshots">Capturas de pantalla</h2>
-<p>AquÌ se muestran algunas capturas de pantalla de la app.</p>
+<p>Aqu√≠ se muestran algunas capturas de pantalla de la app.</p>
 
 <div class="row">
 	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/blitter/screenshot-1.png" alt=""/></div>
@@ -78,7 +78,7 @@
 </ul>
 
 <h2 id="repository">Repositorio</h2>
-<p>El cÛdigo fuente de la app se encuentra en el siguiente repositorio:</p>
+<p>El c√≥digo fuente de la app se encuentra en el siguiente repositorio:</p>
 <ul>
 	<li><a target="_blank" href="https://github.com/samuelss1996/blitter">https://github.com/samuelss1996/blitter</a></li>
 </ul>
