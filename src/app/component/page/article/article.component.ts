@@ -3,12 +3,13 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO beautify date format
-// TODO favicon
 // TODO duplicated ids in article htmls
 // TODO inspect with anything
 // TODO check URLs
-// TODO put images to the usc awards as a link in the bio
+// TODO register domain
+// TODO port DB
+// TODO update readme.md
+// TODO search other TODOs
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
