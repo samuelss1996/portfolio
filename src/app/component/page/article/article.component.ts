@@ -5,7 +5,6 @@ import {DomSanitizer} from '@angular/platform-browser';
 
 // TODO duplicated ids in article htmls
 // TODO inspect with anything
-// TODO check URLs
 // TODO register domain
 // TODO port DB
 // TODO update readme.md

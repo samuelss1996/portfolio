@@ -7,7 +7,7 @@ import {LanguageService} from '../language.service';
     providedIn: 'root'
 })
 export class APIService {
-    public baseUrl = 'http://localhost:4200/api/';
+    public baseUrl = '/api/';
     constructor(private http: HttpClient, private language: LanguageService) {
     }
 
