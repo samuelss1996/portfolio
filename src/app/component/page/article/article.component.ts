@@ -3,8 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO duplicated ids in article htmls
-// TODO inspect with anything
+// TODO why blocked?
 // TODO register domain
 // TODO port DB
 // TODO update readme.md

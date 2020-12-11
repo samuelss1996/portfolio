@@ -4,7 +4,7 @@ import {LOCALE_ID, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {AppRoutingProviders, Routing} from './app.routing';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateLoader, TranslateModule, TranslatePipe, TranslateService} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HeaderComponent} from './component/section/header/header.component';
 import {HomeComponent} from './component/page/home/home.component';
@@ -19,7 +19,7 @@ import {SkillsComponent} from './component/section/skills/skills.component';
 import { LocalizedDatePipe } from './pipe/localized-date.pipe';
 
 import localeEs from '@angular/common/locales/es';
-import {CommonModule, registerLocaleData} from '@angular/common';
+import {registerLocaleData} from '@angular/common';
 import { ArticleListItemComponent } from './component/section/article-list-item/article-list-item.component';
 import { ArticleComponent } from './component/page/article/article.component';
 import { BadgeListComponent } from './component/section/badge-list/badge-list.component';

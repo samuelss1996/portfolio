@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {LanguageService} from '../../../service/language.service';
 import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 

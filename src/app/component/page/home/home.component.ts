@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LanguageService} from '../../../service/language.service';
 import {ActivatedRoute} from '@angular/router';
-import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-home',

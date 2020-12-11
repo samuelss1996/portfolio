@@ -1,6 +1,6 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {LanguageService} from './service/language.service';
-import {Data, Event, NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
+import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {fader} from './app.routing.animations';
 
 @Component({
