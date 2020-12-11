@@ -24,5 +24,6 @@ export class HeaderComponent {
 
     changeLanguage(): void {
         this.language.changeLanguage();
+        location.reload();
     }
 }
