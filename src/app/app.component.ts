@@ -35,7 +35,7 @@ export class AppComponent {
     public handleClick(event): void {
         if (event.target instanceof HTMLAnchorElement) {
             const element = event.target as HTMLAnchorElement;
-            if (element.className === 'router-link') {
+            if (element.className === 'router-link' && element.target !== '_blank') {
                 event.preventDefault();
                 const route = element?.getAttribute('href');
                 if (route) {

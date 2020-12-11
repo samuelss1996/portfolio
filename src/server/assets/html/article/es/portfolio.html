@@ -1,1 +1,73 @@
-TODO
+<h2 id="introducci-n">Introducción</h2>
+<p>Este artículo describe el proceso de desarrollo de el portafolio que estás viendo ahora mismo.</p>
+
+<h2 id="desarrollo">Desarrollo</h2>
+<p>El desarrollo se puede dividir en 6 fases.</p>
+
+<h3 id="fase-1-prototipado-r-pido-en-papel">Fase 1: Prototipado rápido en papel</h3>
+<p>Antes de nada, me pareció buena idea hacer un prototipo rápido en papel del portafolio. Con ello, pretendía definir de forma sencilla, rápida y visual cuales iban a ser los contenidos de la web y como organizarlos.</p>
+<p>Aquí se muestran algunas imágenes de este prototipo en papel.</p>
+
+<div class="row">
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/sketch-1.jpg" alt=""/></div>
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/sketch-2.jpg" alt=""/></div>
+</div>
+
+<p>La plantilla sobre la que dibujé los prototipos se puede encontrar aquí:</p>
+
+<ul>
+	<li><a target="_blank" href="https://www.sketchize.com/">https://www.sketchize.com/</a></li>
+</ul>
+
+<h3 id="fase-2-prototipo-detallado-en-adobe-xd">Fase 2: Prototipo detallado en Adobe XD</h3>
+<p>Una vez que tuve una idea general de que información incluir en el portafolio y como organizarla, era momento de averiguar como hacer que fuese bonito y usable (dentro de mis limitados conocimientos, pues no soy diseñador gráfico).</p>
+<p>Aquí se muestran algunas capturas del prototipo en Adobe XD.</p>
+
+<div class="row">
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/prototype-1.png" alt=""/></div>
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/prototype-2.png" alt=""/></div>
+</div>
+
+<p>El archivo de Adobe XD se puede descargar aquí:</p>
+
+<ul>
+	<li><a target="_blank" href="https://github.com/samuelss1996/portfolio/blob/master/pre-dev/prototype/PortfolioPrototype.xd">https://github.com/samuelss1996/portfolio/blob/master/pre-dev/prototype/PortfolioPrototype.xd</a></li>
+</ul>
+
+<h3 id="fase-3-implementaci-n-de-la-vista">Fase 3: Implementación de la vista</h3>
+<p>Una vez que tuve el prototipo detallado de la vista usando Adobe XD, era el momento de conseguir el mismo resultado pero usando HTML y CSS.</p>
+<p>Para ello, se usó <em>Bootstrap</em> para conseguir el <em>layout</em> deseado y <em>Angular</em> para implementar la lógica estrictamente necesaria en este punto del desarrollo (principalmente se definieron los componentes necesarios y se implementó manejo de rutas).</p>
+<p>Sin embargo, no se implementó ningún tipo de lógica de back-end. Los datos sobre mí, mis proyectos y actividades y, en general, todo el contenido de la página estaba <em>hardcodeado</em>.</p>
+<p>Con ello, prentendía validar de forma empírica si el diseño de la vista que había hecho funcionaba, era usable y satisfacía mis necesidades antes de hacer nada más.</p>
+<p>De haber dejado esto para el final, corría el riesgo de darme cuenta demasiado tarde de que el resultado no me satisfacía nada, en cuyo caso sería probable que tuviese que hacer los cambios en muchos lugares.</p>
+
+<h3 id="fase-4-implementaci-n-de-la-api">Fase 4: Implementación de la API</h3>
+<p>Teniendo ya toda la vista perfectamente definida, implementada y testada, ya sabía exactamente que datos necesitaba obtener desde el back-end.</p>
+<p>Para desacoplar de formal total front-end y back-end, decidí crear una API REST. Esta API proporciona en JSON todos los datos necesarios para el funcionamiento de este portafolio.</p>
+<p>Por ejemplo, puedes ver la consulta a la API que se ha hecho para mostrarte este artículo en la siguiente URL:</p>
+
+<ul>
+	<li><a target="_blank" href="/api/article/id/5fcd328911ff905a1c8513ba">Ver consulta a la API</a></li>
+</ul>
+
+<p>La API está soportada por una base de datos en <em>MongoDB</em> y un servidor HTTP implementado con <em>Node.JS (Express)</em>. Se usó la librería <em>mongoose</em> para facilitar la elaboración de consultas a la base de datos.</p>
+
+<h3 id="fase-5-integraci-n">Fase 5: Integración</h3>
+<p>Teniendo ya la vista y la API implementadas, era momento de conectar ambas.</p>
+<p>En esta fase simplemente se crearon los servicios de <em>Angular</em> necesarios para realizar las consultas al back-end, y se reemplazaron los valores anteriormente <em>hardcodeados</em> por los valores obtenidos mediante estas consultas.</p>
+
+<h3 id="fase-6-despliegue">Fase 6: Despliegue</h3>
+<p>Para desplegar la web se usó <em>heroku</em>, que se integra perfectamente con el sistema de control de versiones (<em>Git</em>) de forma que resulta también sencillo publicar actualizaciones.</p>
+
+<h2 id="equipo">Equipo</h2>
+
+<ul>
+	<li><strong>Samuel Soutullo Sobral</strong></li>
+</ul>
+
+<h2 id="repositorio">Repositorio</h2>
+<p>Todo el código fuente del portafolio se puede encontrar aquí:</p>
+
+<ul>
+	<li><a target="_blank" href="https://github.com/samuelss1996/portfolio/">https://github.com/samuelss1996/portfolio/</a></li>
+</ul>
