@@ -3,10 +3,8 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO port DB
 // TODO register domain
 // TODO update readme.md
-// TODO search other TODOs
 // TODO add &origin=https://yourdomain.com to youtube iframes
 @Component({
     selector: 'app-article',

@@ -11,7 +11,6 @@ import {ActivitiesResolver} from './resolver/activities.resolver';
 import {DocumentsResolver} from './resolver/documents.resolver';
 import {ArticleResolver} from './resolver/article.resolver';
 
-// TODO add page not found component
 const appRoutes = [
     {path: '', component: HomeComponent, resolve: {response: HomeResolver}},
     {path: 'projects', component: ProjectsComponent, resolve: {response: ProjectsResolver}},
