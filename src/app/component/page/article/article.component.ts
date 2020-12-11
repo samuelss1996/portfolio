@@ -3,7 +3,6 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO I actually only have the award to one of the best three thingies
 // TODO beautify date format
 // TODO favicon
 // TODO duplicated ids in article htmls
