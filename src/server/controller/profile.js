@@ -11,7 +11,7 @@ const ProfileController = {
 
     getProfileData: function(req, res) {
         Profile.findOne({}, (err, profile) => {
-            Utils.injectLocalizedHtml(req, profile, 'about/', 'description', () => {
+            Utils.injectLocalizedHtml('about/', req, profile, 'description', () => {
                 return Utils.sendJson(req, res, err, profile);
             });
         });

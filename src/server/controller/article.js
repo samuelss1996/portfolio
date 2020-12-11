@@ -17,7 +17,7 @@ const ArticleController = {
         const id = req.params.id;
 
         Article.findOne({_id: id}, (err, article) => {
-            Utils.injectLocalizedHtml(req, article, 'article/', 'content', () => {
+            Utils.injectLocalizedHtml('article/', req, article, 'content', () => {
                 return Utils.sendJson(req, res, err, article);
             });
         });

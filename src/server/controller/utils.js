@@ -27,7 +27,7 @@ const Utils = {
         });
     },
 
-    injectLocalizedHtml: function(req, data, folder, targetField, callback) {
+    injectLocalizedHtml: function (folder, req, data, targetField, callback) {
         Utils.setLanguage(req, data);
         Utils.readHtml(folder, data[targetField], localizedHtml => {
             data[targetField] = localizedHtml;
