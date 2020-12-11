@@ -7,7 +7,7 @@ const DocumentController = {
 
     getDocuments: function(req, res) {
         Document.find({}, (err, documents) => {
-           return Utils.sendJson(res, err, documents);
+           return Utils.sendJson(req, res, err, documents);
         });
     }
 };

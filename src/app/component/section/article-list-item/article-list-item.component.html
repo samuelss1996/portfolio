@@ -9,7 +9,7 @@
             <app-badge-list [tags]="article.tags"></app-badge-list>
 
             <h3 class="article-list-item-title mt-2" [class.underline]="mouseOver">{{article.title}}</h3>
-            <p [class.underline]="mouseOver" class="mini text-left" *ngFor="let paragraph of article.description">{{paragraph}}</p>
+            <p [class.underline]="mouseOver" class="mini text-left">{{article.description}}</p>
         </a>
     </div>
 

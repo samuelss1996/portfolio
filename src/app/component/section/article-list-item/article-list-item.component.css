@@ -4,6 +4,7 @@
 
 .article-thumbnail {
     border-radius: 4px;
+    border: 1px solid #e0e0e0;
 }
 
 .article-thumbnail-wrapper {
@@ -22,6 +23,8 @@
     align-items: center;
     color: #FFF;
     opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
     transition: opacity 300ms;
 }
 

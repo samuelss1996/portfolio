@@ -11,25 +11,27 @@ const ProfileController = {
 
     getProfileData: function(req, res) {
         Profile.findOne({}, (err, profile) => {
-            return Utils.sendJson(res, err, profile);
+            Utils.injectLocalizedHtml('about/', req, profile, 'description', () => {
+                return Utils.sendJson(req, res, err, profile);
+            });
         });
     },
 
     getExperience: function(req, res) {
         Job.find({}, (err, jobs) => {
-            return Utils.sendJson(res, err, jobs);
+            return Utils.sendJson(req, res, err, jobs);
         });
     },
 
     getSkills: function(req, res) {
         Skill.find({}, (err, skills) => {
-            return Utils.sendJson(res, err, skills);
+            return Utils.sendJson(req, res, err, skills);
         });
     },
 
     getEducation: function(req, res) {
         Education.find({}, (err, profile) => {
-            return Utils.sendJson(res, err, profile);
+            return Utils.sendJson(req, res, err, profile);
         });
     },
 };

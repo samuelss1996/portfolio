@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {LanguageService} from './service/language.service';
-import {Data, Event, NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
+import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {fader} from './app.routing.animations';
 
 @Component({
@@ -29,5 +29,19 @@ export class AppComponent {
         setTimeout(() => {
             window.scrollTo(0, 0);
         }, 300);
+    }
+
+    @HostListener('document:click', ['$event'])
+    public handleClick(event): void {
+        if (event.target instanceof HTMLAnchorElement) {
+            const element = event.target as HTMLAnchorElement;
+            if (element.className === 'router-link' && element.target !== '_blank') {
+                event.preventDefault();
+                const route = element?.getAttribute('href');
+                if (route) {
+                    this.router.navigate([`/${route}`]);
+                }
+            }
+        }
     }
 }

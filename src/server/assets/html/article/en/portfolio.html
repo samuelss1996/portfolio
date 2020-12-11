@@ -1,0 +1,73 @@
+<h2 id="introduction">Introduction</h2>
+<p>This article describes the development process of the portfolio you are browsing at the moment.</p>
+
+<h2 id="development">Development</h2>
+<p>The development can be divided in 6 phases.</p>
+
+<h3 id="phase-1-paper-sketching">Phase 1: Paper sketching</h3>
+<p>Before anything else, I thought it would be a good idea to make a paper sketch of the portfolio. The idea behind this was to define in a simple, quick, visual way what the contents of the web were going to be and how to organize them.</p>
+<p>Here are some pictures of this paper sketch.</p>
+
+<div class="row">
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/sketch-1.jpg" alt=""/></div>
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/sketch-2.jpg" alt=""/></div>
+</div>
+
+<p>The template I used to draw on top my sketches can be found here:</p>
+
+<ul>
+	<li><a target="_blank" href="https://www.sketchize.com/">https://www.sketchize.com/</a></li>
+</ul>
+
+<h3 id="phase-2-high-fidelity-prototype-in-adobe-xd">Phase 2: High-fidelity prototype in Adobe XD</h3>
+<p>Once I had a general idea on what information to include in the portfolio and how to organize it, it was time to find out how to make it look nice and usable (as best as I could, because I am not a professional graphic designer).</p>
+<p>Here are some screenshots of the prototype in Adobe XD.</p>
+
+<div class="row">
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/prototype-1.png" alt=""/></div>
+	<div class="col-12 col-lg-6"><img class="img-responsive mb-4" src="/assets/img/portfolio/prototype-2.png" alt=""/></div>
+</div>
+
+<p>The Adobe XD file can be downloaded here:</p>
+
+<ul>
+	<li><a target="_blank" href="https://github.com/samuelss1996/portfolio/blob/master/pre-dev/prototype/PortfolioPrototype.xd">https://github.com/samuelss1996/portfolio/blob/master/pre-dev/prototype/PortfolioPrototype.xd</a></li>
+</ul>
+
+<h3 id="phase-3-view-implementation">Phase 3: View implementation</h3>
+<p>Once I had the high-fidelity prototype, it was time to port it to actual code using HTML and CSS.</p>
+<p>To achieve that, I used <em>Bootstrap</em> to define the layout and <em>Angular</em> to implement just the very essential logic at this stage of the development (namely I defined the necessary components and I implemented the route handling).</p>
+<p>Nonetheless, no back-end logic was implemented. All the data about me, my projects and activities and, in general, all the content of the site was hard-coded.</p>
+<p>With this approach, my intention was to validate in an empirical way if the design of the view was correct, usable and fulfilled all my needs before doing anything else.</p>
+<p>Had I left these tasks for the end, I would risk to realize too late that the result was not satisfying, in which case it would be more likely that I had to make changes in many places.</p>
+
+<h3 id="phase-4-api-implementation">Phase 4: API implementation</h3>
+<p>Having already defined, implemented and tested the view, I knew exactly what data I needed to get from the back-end.</p>
+<p>In order to decouple the front-end from the back-end, I decided to create a REST API. This API provides in JSON format all the necessary data for the portfolio to function correctly.</p>
+<p>For example, you can check the API request that has been performed to show you this article in the following URL:</p>
+
+<ul>
+	<li><a target="_blank" href="/api/article/id/5fcd328911ff905a1c8513ba">View the API request</a></li>
+</ul>
+
+<p>The API is backed by a <em>MongoDB</em> database as well as a HTTP server implemented with <em>Node.JS (Express)</em>. The library <em>mongoose</em> was used to facilitate querying the database.</p>
+
+<h3 id="phase-5-integration">Phase 5: Integration</h3>
+<p>Having already the view and the API implemented, it was  time to connect both.</p>
+<p>In this phase I simply created the necessary <em>Angular</em> services to make requests to the back-end. The previously hard-coded values were now replaced with the values returned by these queries.</p>
+
+<h3 id="phase-6-deployment">Phase 6: Deployment</h3>
+<p>In order to deploy the web <em>heroku</em> was used. It perfectly integrates with the version control system (<em>Git</em>), thus easing the process of publishing updates.</p>
+
+<h2 id="team">Team</h2>
+
+<ul>
+	<li><strong>Samuel Soutullo Sobral</strong></li>
+</ul>
+
+<h2 id="repository">Repository</h2>
+<p>The source code of the portfolio can be found here:</p>
+
+<ul>
+	<li><a target="_blank" href="https://github.com/samuelss1996/portfolio/">https://github.com/samuelss1996/portfolio/</a></li>
+</ul>

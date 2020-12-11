@@ -38,6 +38,10 @@
     margin: 1rem 0 0.5rem 0;
 }
 
+.date-title-corporation a{
+    color: inherit;
+}
+
 .experience-description {
     margin-left: 62px;
 }

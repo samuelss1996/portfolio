@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {LanguageService} from '../../../service/language.service';
 import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 
@@ -10,7 +10,7 @@ import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
 export class HeaderComponent {
     public loading = true;
 
-    constructor(private router: Router, private language: LanguageService) {
+    constructor(public router: Router, private language: LanguageService) {
         this.router.events.subscribe(event => this.handleRoutingEvents(event));
     }
 
@@ -24,5 +24,6 @@ export class HeaderComponent {
 
     changeLanguage(): void {
         this.language.changeLanguage();
+        location.reload();
     }
 }
