@@ -1,0 +1,24 @@
+<section id="about-me">
+    <h1 translate>About me</h1>
+    <div [outerHTML]="about.description"></div>
+
+    <div class="row" id="about-bullets">
+        <div class="col-12 col-lg-6">
+            <h4 translate>Interests</h4>
+            <ul id="interests" class="fa-ul">
+                <li *ngFor="let interest of about.interests"><span class="fa-li"><i class="{{interest.icon}}"></i></span>{{interest.text}}</li>
+            </ul>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <h4 translate>Education</h4>
+            <ul id="education" class="fa-ul">
+                <li *ngFor="let eduItem of education">
+                    <span class="fa-li"><i class="fas fa-graduation-cap"></i></span>
+                    <span>{{eduItem.degree}}</span>
+                    <h5>{{eduItem.university}} ({{eduItem.year_start}} - {{eduItem.year_end}})</h5>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<header>
+    <div class="shadow-medium" id="nav-wrapper">
+        <mat-progress-bar id="progress-bar" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+        <nav class="container">
+            <ul id="main-menu" class="row flex-nowrap justify-content-center">
+                <li class="col-auto mx-auto col-md-2 mx-md-0"><a class="undecorated" routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" translate>Home</a></li>
+                <li class="col-auto mx-auto col-md-2 mx-md-0"><a class="undecorated" routerLink="projects" routerLinkActive="active" translate>Projects</a>
+                </li>
+                <li class="col-auto mx-auto col-md-2 mx-md-0"><a class="undecorated" routerLink="activities" routerLinkActive="active" translate>Activities</a>
+                </li>
+                <li class="col-auto mx-auto col-md-2 mx-md-0"><a class="undecorated" routerLink="documents" routerLinkActive="active" translate>Documents</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <p class="row justify-content-end"><a class="col-3" id="change-language" href="{{router.url}}" (click)="changeLanguage()" translate>Español</a></p>
+    </div>
+</header>

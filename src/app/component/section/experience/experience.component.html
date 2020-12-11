@@ -1,0 +1,23 @@
+<app-responsive-section [title]="'Experience' | translate">
+    <div id="experience-wrapper">
+        <div class="experience-item" *ngFor="let expItem of experience">
+            <div class="row align-items-center experience-item-header">
+                <div class="col-auto">
+                    <img src="{{expItem.icon}}" alt="">
+                </div>
+
+                <div class="col date-title-corporation">
+                    <h6>{{expItem.date_start | localizedDate}} - {{expItem.date_end | localizedDate}}</h6>
+                    <h4>{{expItem.position}}</h4>
+                    <h5><a target="_blank" href="{{expItem.web}}">{{expItem.company}}</a>, {{expItem.location}}</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col experience-description">
+                    <p class="mini">{{expItem.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-responsive-section>

@@ -1,0 +1,23 @@
+<app-responsive-section [title]="'Skills' | translate">
+    <ul id="skills" class="row">
+        <li class="col-12 col-md-6" *ngFor="let skill of skills">
+            <div class="row align-items-center no-gutters">
+                <div class="col-auto">
+                    <img class="skill-icon" src="{{skill.group_icon}}" alt=""/>
+                </div>
+                <h4 class="col">{{skill.group_title}}</h4>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-auto">
+                    <div class="dummy-icon"></div>
+                </div>
+                <div class="col">
+                    <ul class="skill-sublist">
+                        <li *ngFor="let item of skill.items">{{item.item}}</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</app-responsive-section>

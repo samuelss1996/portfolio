@@ -1,0 +1,11 @@
+#home-conclusion {
+    background-color: #EEEEEE;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center !important;
+}
+
+#home-conclusion p {
+    text-align: center !important;
+    margin-bottom: 0;
+}

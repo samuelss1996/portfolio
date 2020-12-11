@@ -1,0 +1,30 @@
+#skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-sublist {
+    list-style: disc;
+    margin-bottom: 2rem;
+}
+
+.skill-icon {
+    width: 2rem;
+    border-radius: 1rem;
+    border: 2px solid #007bff;
+}
+
+.dummy-icon {
+    width: 2rem;
+}
+
+h4 {
+    margin: 0 0 0 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .skill-sublist {
+        margin-bottom: 3rem;
+    }
+}

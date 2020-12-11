@@ -1,0 +1,19 @@
+.social-networks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-networks li {
+    margin: 0;
+    padding: 0;
+}
+
+.social-networks li a {
+    font-size: 2rem;
+}
+
+.social-networks li img {
+    height: 2rem;
+    width: auto;
+}

@@ -1,0 +1,13 @@
+.responsive-section {
+    margin-top: 4rem;
+}
+
+.responsive-section-title {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+    .responsive-section-content {
+        margin-top: 4rem;
+    }
+}

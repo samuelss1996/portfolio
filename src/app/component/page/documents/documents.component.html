@@ -1,0 +1,20 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-lg-9 mx-auto">
+            <h1 translate>Documents</h1>
+            <p translate>This page presents a selection of my academic works that I consider the most relevant.</p>
+
+            <ng-container *ngFor="let documentGroup of documentGroups">
+                <h2>{{documentGroup.group}}</h2>
+                <ul>
+                    <li *ngFor="let document of documentGroup.documents">
+                        <h4>{{document.title}}</h4>
+                        <p class="mb-1">{{document.description}}</p>
+                        <p *ngIf="document.link"><a target="_blank" href="{{document.link}}" translate>Download as PDF</a></p>
+                        <p *ngIf="!document.link" translate>[NOT AVAILABLE YET]</p>
+                    </li>
+                </ul>
+            </ng-container>
+        </div>
+    </div>
+</section>

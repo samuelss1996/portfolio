@@ -1,0 +1,12 @@
+<article class="container">
+    <div class="row mb-5">
+        <div class="col-12 col-lg-9 mx-auto">
+            <h1>{{article.title}}</h1>
+
+            <app-badge-list [tags]="article.tags"></app-badge-list>
+            <app-article-external-links [links]="article.external_links"></app-article-external-links>
+
+            <div [outerHTML]="article.content"></div>
+        </div>
+    </div>
+</article>
