@@ -13,19 +13,10 @@ const InterestSchema = Schema({
     }
 });
 
-const ParagraphSchema = Schema({
-    id: false,
-    paragraph: {type: String, intl: true}
-}, {
-    toJSON: {
-        virtuals: true
-    }
-});
-
 const ProfileSchema = Schema({
     name: String,
     surname: String,
-    description: [ParagraphSchema],
+    description: {type: String, intl: true},
     interests: [InterestSchema],
 }, {
     toJSON: {

@@ -1,7 +1,9 @@
 'use strict';
 
-const Utils = {
+const fs = require('fs');
+const baseHtmlFolder = 'src/server/assets/html/';
 
+const Utils = {
     sendJson: function(request, response, err, data) {
         if(err || data === null) {
             return response.status(500).send({status: 500, message: "Error while querying data", error: err});
@@ -13,6 +15,24 @@ const Utils = {
 
     sendNotFound: function(req, res) {
         return res.status(404).send({status: 404, message: "API method not found"});
+    },
+
+    readHtml: function(folder, file, callback) {
+        fs.readFile(baseHtmlFolder + folder + file, 'utf8', (fileError, data) => {
+            if (!fileError) {
+                callback(data);
+            } else {
+                callback('Error');
+            }
+        });
+    },
+
+    injectLocalizedHtml: function(req, data, folder, targetField, callback) {
+        Utils.setLanguage(req, data);
+        Utils.readHtml(folder, data[targetField], localizedHtml => {
+            data[targetField] = localizedHtml;
+            callback();
+        });
     },
 
     setLanguage: function(request, field) {
