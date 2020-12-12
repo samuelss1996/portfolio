@@ -7,7 +7,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 // TODO check typos (telegram)
 // TODO register domain
 // TODO update readme.md
-// TODO update CV (add Spanish)
+// TODO update CV (add Spanish and remove phone number)
 // TODO add &origin=https://yourdomain.com to youtube iframes
 @Component({
     selector: 'app-article',
