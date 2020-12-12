@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO check typos (telegram)
+// TODO change to not online yet on documents
 // TODO update readme.md
 // TODO update CV (add Spanish and remove phone number)
 // TODO add &origin=https://yourdomain.com to youtube iframes
