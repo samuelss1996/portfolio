@@ -24,10 +24,10 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false}));
 
-mongoose.plugin(mongooseIntl, { languages: ['en', 'es'], defaultLanguage: 'en' });
-mongoose.connect("mongodb+srv://read-only:K2oEk6dSbVnvZopU434chdcbKVasLc@portfolio.9ne2w.mongodb.net/portfolio?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.plugin(mongooseIntl, {languages: ['en', 'es'], defaultLanguage: 'en'});
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log("Connection successful");
         let server = app.listen(process.env.PORT || 8080, () => {
@@ -37,11 +37,23 @@ mongoose.connect("mongodb+srv://read-only:K2oEk6dSbVnvZopU434chdcbKVasLc@portfol
     })
     .catch(e => console.log(e));
 
+
+// Force HTTPS
+if (app.get('env') === 'production') {
+    app.use(function (req, res, next) {
+        if ((req.get('X-Forwarded-Proto') !== 'https')) {
+            res.redirect('https://' + req.get('Host') + req.url);
+        } else {
+            next();
+        }
+    });
+}
+
 // Initialize routes
 const apiRouter = require('./route/api');
 app.use("/api", apiRouter);
 
-app.all('/*', function(req, res) {
-    res.sendFile('index.html', { root: distDir });
+app.all('/*', function (req, res) {
+    res.sendFile('index.html', {root: distDir});
 });
 
