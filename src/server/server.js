@@ -7,11 +7,10 @@ const path = require("path");
 const app = express();
 
 const mongoose = require("mongoose");
-const mongooseIntl = require("mongoose-intl")
+const mongooseIntl = require("mongoose-intl");
 
 // Create a link to Angular directory
 let distDir = path.join(__dirname, "../../dist/");
-app.use(express.static(distDir));
 
 // Setup requests and responses
 app.use(bodyParser.urlencoded({extended: false}));
@@ -49,10 +48,14 @@ if (app.get('env') === 'production') {
     });
 }
 
+// Serve angular content
+app.use(express.static(distDir));
+
 // Initialize routes
 const apiRouter = require('./route/api');
 app.use("/api", apiRouter);
 
+// By default, let angular handle everything else
 app.all('/*', function (req, res) {
     res.sendFile('index.html', {root: distDir});
 });
