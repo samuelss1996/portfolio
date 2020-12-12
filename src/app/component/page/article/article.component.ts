@@ -4,7 +4,8 @@ import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
 // TODO update readme.md
-// TODO update CV (add Spanish and remove phone number)
+// TODO update title
+// TODO whatsapp thumbnail
 // TODO add &origin=https://yourdomain.com to youtube iframes
 @Component({
     selector: 'app-article',
