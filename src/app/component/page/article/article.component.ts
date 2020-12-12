@@ -3,9 +3,8 @@ import {ActivatedRoute} from '@angular/router';
 import {LanguageService} from '../../../service/language.service';
 import {DomSanitizer} from '@angular/platform-browser';
 
-// TODO redirect by default to https
+// TODO translate education (and write MSc and BSc)
 // TODO check typos (telegram)
-// TODO register domain
 // TODO update readme.md
 // TODO update CV (add Spanish and remove phone number)
 // TODO add &origin=https://yourdomain.com to youtube iframes
