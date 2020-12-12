@@ -5,7 +5,7 @@ const baseHtmlFolder = 'src/server/assets/html/';
 
 const Utils = {
     sendJson: function(request, response, err, data) {
-        if(err || data === null) {
+        if(err || !data) {
             return response.status(500).send({status: 500, message: "Error while querying data", error: err});
         }
 
@@ -28,11 +28,15 @@ const Utils = {
     },
 
     injectLocalizedHtml: function (folder, req, data, targetField, callback) {
-        Utils.setLanguage(req, data);
-        Utils.readHtml(folder, data[targetField], localizedHtml => {
-            data[targetField] = localizedHtml;
+        if (data) {
+            Utils.setLanguage(req, data);
+            Utils.readHtml(folder, data[targetField], localizedHtml => {
+                data[targetField] = localizedHtml;
+                callback();
+            });
+        } else {
             callback();
-        });
+        }
     },
 
     setLanguage: function(request, field) {
