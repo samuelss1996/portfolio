@@ -12,6 +12,6 @@ export class HomeConclusionComponent implements OnInit {
     constructor(private language: LanguageService) { }
 
     ngOnInit(): void {
-        this.cvHref = `assets/pdf/cv/${this.language.currentLanguage}.pdf`;
+        this.cvHref = `assets/pdf/cv/${this.language.currentLanguage}/SamuelSoutullo_CV.pdf`;
     }
 }
