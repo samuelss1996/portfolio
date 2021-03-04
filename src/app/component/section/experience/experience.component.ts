@@ -10,6 +10,10 @@ export class ExperienceComponent implements OnInit {
     @Input() experience: any;
 
     ngOnInit(): void {
-        this.experience.sort((a, b) => Utils.compareDatesDescending(new Date(a.date_end), new Date(b.date_end)));
+        this.experience.sort((a, b) => Utils.compareDatesDescending(this.getEndDate(a), this.getEndDate(b)));
+    }
+
+    private getEndDate(experienceItem: any): Date {
+        return experienceItem.date_end ? experienceItem.date_end : new Date(8640000000000000);
     }
 }
